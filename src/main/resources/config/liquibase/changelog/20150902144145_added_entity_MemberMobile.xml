@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added the entity MemberMobile.
+    -->
+    <changeSet id="20150902144145-1" author="jhipster">
+        <createTable tableName="member_mobile">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="first_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="last_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="date_of_birth" type="date">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="email_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="mobile_no" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="address_1" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="address_2" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="city" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="state" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="zipcode" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="country" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="photo" type="longblob">
+                <constraints nullable="true" />
+            </column>
+            <column name="photo_content_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="photo_id_proof" type="longblob">
+                <constraints nullable="true" />
+            </column>
+            <column name="photo_id_proof_content_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="my_current_rent_units" type="integer">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="my_charged_rent_units" type="integer">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="behavior_status" type="integer">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="my_current_fine_charges" type="integer">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="date_of_expiration" type="date">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="user_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="pass_word" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="activated" type="bit">
+                <constraints nullable="true" />
+            </column>
+            
+            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+</databaseChangeLog>

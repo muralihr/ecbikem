@@ -1,0 +1,101 @@
+<div>
+    <h2 translate="ecbikeApp.rentalTrip.home.title">Rental Trips</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="rental-trip.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="ecbikeApp.rentalTrip.home.createLabel">
+                        Create new Rental Trip
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'ecbikeApp.rentalTrip.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="rentStartTime"><span translate="ecbikeApp.rentalTrip.rentStartTime">Rent Start Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="rentStopTime"><span translate="ecbikeApp.rentalTrip.rentStopTime">Rent Stop Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fineApplied"><span translate="ecbikeApp.rentalTrip.fineApplied">Fine Applied</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="rentedCycle.tagId"><span translate="ecbikeApp.rentalTrip.rentedCycle">Rented Cycle</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="customer.id"><span translate="ecbikeApp.rentalTrip.customer">Customer</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="startNode.stationName"><span translate="ecbikeApp.rentalTrip.startNode">Start Node</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="stopNode.stationName"><span translate="ecbikeApp.rentalTrip.stopNode">Stop Node</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="rentalCharge.id"><span translate="ecbikeApp.rentalTrip.rentalCharge">Rental Charge</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="rentalTrip in vm.rentalTrips track by rentalTrip.id">
+                    <td><a ui-sref="rental-trip-detail({id:rentalTrip.id})">{{rentalTrip.id}}</a></td>
+                    <td>{{rentalTrip.rentStartTime | date:'medium'}}</td>
+                    <td>{{rentalTrip.rentStopTime | date:'medium'}}</td>
+                    <td>{{rentalTrip.fineApplied}}</td>
+                    <td>
+                        <a ui-sref="bicycle-detail({id:rentalTrip.rentedCycle.id})">{{rentalTrip.rentedCycle.tagId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="member-mobile-detail({id:rentalTrip.customer.id})">{{rentalTrip.customer.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="rental-buffer-node-detail({id:rentalTrip.startNode.id})">{{rentalTrip.startNode.stationName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="rental-buffer-node-detail({id:rentalTrip.stopNode.id})">{{rentalTrip.stopNode.stationName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="hourly-rental-charges-detail({id:rentalTrip.rentalCharge.id})">{{rentalTrip.rentalCharge.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="rental-trip-detail({id:rentalTrip.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="rental-trip.edit({id:rentalTrip.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="rental-trip.delete({id:rentalTrip.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+{
+    "ecbikeApp": {
+        "billingNode" : {
+            "home": {
+                "title": "Billing Nodes",
+                "createLabel": "Billing Node-ஐ உருவாக்கு",
+                "createOrEditLabel": "Billing Node -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Billing Node"
+            },
+            "created": "Billing Node புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Billing Node மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Billing Node நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Billing Node {{ id }}?"
+            },
+            "detail": {
+                "title": "Billing Node"
+            },
+            "billCenterName": "Bill Center Name",
+            "storageCapacity": "Storage Capacity",
+            "address1": "Address 1",
+            "address2": "Address 2",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "longitudePos": "Longitude Pos",
+            "latitudePos": "Latitude Pos",
+            "colorCode": "Color Code",
+            "billCenterManager": "Bill Center Manager"
+        }
+    }
+}

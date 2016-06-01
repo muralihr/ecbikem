@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "typeOfIDCard" : {
+            "home": {
+                "title": "Type Of Id Cards",
+                "createLabel": "Create a new Type Of Id Card",
+                "createOrEditLabel": "Create or edit a Type Of Id Card",
+                "search": "Search for Type Of Id Card"
+            },
+            "created": "A new Type Of Id Card is created with identifier {{ param }}",
+            "updated": "A Type Of Id Card is updated with identifier {{ param }}",
+            "deleted": "A Type Of Id Card is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Type Of Id Card {{ id }}?"
+            },
+            "detail": {
+                "title": "Type Of Id Card"
+            },
+            "authorizedIDName": "Authorized Id Name",
+            "authorizationAgency": "Authorization Agency"
+        }
+    }
+}

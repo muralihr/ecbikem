@@ -1,0 +1,189 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "firstName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "lastName",
+            "fieldType": "String",
+             "fieldValidateRules": [
+                 
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "dateOfBirth",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "emailId",
+            "fieldType": "String",
+              "fieldValidateRules": [
+                 
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "mobileNo",
+            "fieldType": "String",
+             "fieldValidateRules": [
+                 
+            ]
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "address1",
+            "fieldType": "String",
+              "fieldValidateRules": [
+                 
+            ]
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "address2",
+            "fieldType": "String",
+              "fieldValidateRules": [
+                 
+            ]
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "city",
+            "fieldType": "String",
+             "fieldValidateRules": [
+                 
+            ]
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "state",
+            "fieldType": "String",
+              "fieldValidateRules": [
+                 
+            ]
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "zipcode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "country",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                 
+            ]
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "photo",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image",
+            "fieldValidateRules": [
+               
+            ]
+        },
+          {
+            "fieldId": 12,
+            "fieldName": "photoIDProof",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image",
+            "fieldValidateRules": [
+               
+            ]
+        }, 
+        {
+            "fieldId": 13,
+            "fieldName": "myCurrentRentUnits",
+            "fieldType": "Integer",
+            "fieldTypeBlobContent": "image",
+            "fieldValidateRules": [
+               
+            ]
+        },
+
+        {
+            "fieldId": 14,
+            "fieldName": "myChargedRentUnits",
+            "fieldType": "Integer",
+            "fieldTypeBlobContent": "image",
+            "fieldValidateRules": [
+             
+            ]
+        },
+        {
+            "fieldId": 15,
+            "fieldName": "behaviorStatus",
+            "fieldType": "Integer",
+            "fieldTypeBlobContent": "image",
+            "fieldValidateRules": [
+                 
+            ]
+        },
+
+        {
+            "fieldId": 16,
+            "fieldName": "myCurrentFineCharges",
+            "fieldType": "Integer",
+            "fieldTypeBlobContent": "image",
+            "fieldValidateRules": [
+                 
+            ]
+        } ,
+
+         {
+            "fieldId": 17,
+            "fieldName": "dateOfExpiration",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                 
+            ]
+        },
+
+         {
+            "fieldId": 18,
+            "fieldName": "userName",
+            "fieldType": "String",
+              "fieldValidateRules": [
+                 
+            ]
+        },
+        {
+            "fieldId": 19,
+            "fieldName": "passWord",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                 
+            ]
+        } ,
+		  {
+            "fieldId": 20,
+            "fieldName": "activated",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                 
+            ]
+        } 
+        
+
+        
+    ],
+    "changelogDate": "20150902144145",
+    "dto": "no",
+    "pagination": "pagination"
+}

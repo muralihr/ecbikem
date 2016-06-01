@@ -1,0 +1,185 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myRentalBufferNodeLabel" translate="ecbikeApp.rentalBufferNode.home.createOrEditLabel">Create or edit a Rental Buffer Node</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.rentalBufferNode.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.rentalBufferNode.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.stationName" for="field_stationName">Station Name</label>
+            <input type="text" class="form-control" name="stationName" id="field_stationName"
+                    ng-model="vm.rentalBufferNode.stationName"
+                    required />
+            <div ng-show="editForm.stationName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.stationName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.address1" for="field_address1">Address 1</label>
+            <input type="text" class="form-control" name="address1" id="field_address1"
+                    ng-model="vm.rentalBufferNode.address1"
+                    required />
+            <div ng-show="editForm.address1.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.address1.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.address2" for="field_address2">Address 2</label>
+            <input type="text" class="form-control" name="address2" id="field_address2"
+                    ng-model="vm.rentalBufferNode.address2"
+                    required />
+            <div ng-show="editForm.address2.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.address2.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.rentalBufferNode.city"
+                    required />
+            <div ng-show="editForm.city.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.city.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.state" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.rentalBufferNode.state"
+                    required />
+            <div ng-show="editForm.state.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.state.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.zipcode" for="field_zipcode">Zipcode</label>
+            <input type="text" class="form-control" name="zipcode" id="field_zipcode"
+                    ng-model="vm.rentalBufferNode.zipcode"
+                    required />
+            <div ng-show="editForm.zipcode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.longitudePos" for="field_longitudePos">Longitude Pos</label>
+            <input type="number" class="form-control" name="longitudePos" id="field_longitudePos"
+                    ng-model="vm.rentalBufferNode.longitudePos"
+                    required />
+            <div ng-show="editForm.longitudePos.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.longitudePos.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.longitudePos.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.latitudePos" for="field_latitudePos">Latitude Pos</label>
+            <input type="number" class="form-control" name="latitudePos" id="field_latitudePos"
+                    ng-model="vm.rentalBufferNode.latitudePos"
+                    required />
+            <div ng-show="editForm.latitudePos.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.latitudePos.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.latitudePos.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.colorCode" for="field_colorCode">Color Code</label>
+            <input type="text" class="form-control" name="colorCode" id="field_colorCode"
+                    ng-model="vm.rentalBufferNode.colorCode"
+                    required />
+            <div ng-show="editForm.colorCode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.colorCode.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setPhotoOfLocation($file, vm.rentalBufferNode)" ngf-pattern="'image/*'">
+            <label class="control-label" translate="ecbikeApp.rentalBufferNode.photoOfLocation" for="field_photoOfLocation">Photo Of Location</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.rentalBufferNode.photoOfLocationContentType + ';base64,' + vm.rentalBufferNode.photoOfLocation}}" style="max-height: 100px;" ng-if="vm.rentalBufferNode.photoOfLocation"/>
+                <div class="help-block clearfix">
+                    <span class="pull-left">{{vm.rentalBufferNode.photoOfLocationContentType}}, {{byteSize(vm.rentalBufferNode.photoOfLocation)}}</span>
+                    <button ng-click="vm.rentalBufferNode.photoOfLocation=null;vm.rentalBufferNode.photoOfLocationContentType=null;"
+                            ng-if="vm.rentalBufferNode.photoOfLocation"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="file" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setPhotoOfLocation($file, vm.rentalBufferNode)" accept="image/*" translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="photoOfLocation" id="field_photoOfLocation"
+                    ng-model="vm.rentalBufferNode.photoOfLocation"
+                    required minbytes="1000" maxbytes="35000" />
+            <input type="hidden" class="form-control" name="photoOfLocationContentType" id="field_photoOfLocationContentType"
+                    ng-model="vm.rentalBufferNode.photoOfLocationContentType" />
+            <div ng-show="editForm.photoOfLocation.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.photoOfLocation.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.photoOfLocation.$error.minbytes" translate="entity.validation.minbytes" translate-value-min="1000">
+                    This field should be more than 1000.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.photoOfLocation.$error.maxbytes" translate="entity.validation.maxbytes" translate-value-max="35000">
+                    This field cannot be more than 35000.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="ecbikeApp.rentalBufferNode.nodeManager" for="field_nodeManager">Node Manager</label>
+            <select class="form-control" id="field_nodeManager" name="nodeManager" ng-model="vm.rentalBufferNode.nodeManager" ng-options="user as user.firstName for user in vm.users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

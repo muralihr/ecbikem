@@ -1,0 +1,68 @@
+
+<div>
+    <h2><span translate="ecbikeApp.stockBufferNode.detail.title">Stock Buffer Node</span> {{vm.stockBufferNode.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="ecbikeApp.stockBufferNode.godownName">Godown Name</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.godownName}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.storageCapacity">Storage Capacity</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.storageCapacity}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.address1">Address 1</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.address1}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.address2">Address 2</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.address2}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.city">City</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.city}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.state">State</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.state}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.zipcode">Zipcode</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.zipcode}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.longitudePos">Longitude Pos</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.longitudePos}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.latitudePos">Latitude Pos</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.latitudePos}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.colorCode">Color Code</span></dt>
+        <dd>
+            <span>{{vm.stockBufferNode.colorCode}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.stockBufferNode.stockManager">Stock Manager</span></dt>
+        <dd>
+            {{vm.stockBufferNode.stockManager.firstName}}
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span translate="ecbikeApp.memberBill.detail.title">Member Bill</span> {{vm.memberBill.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="ecbikeApp.memberBill.dateOfPayment">Date Of Payment</span></dt>
+        <dd>
+            <span>{{vm.memberBill.dateOfPayment | date:'medium'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberBill.billCenter">Bill Center</span></dt>
+        <dd>
+            <a ui-sref="billing-node-detail({id:vm.memberBill.billCenter.id})">{{vm.memberBill.billCenter.billCenterName}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberBill.memberToBill">Member To Bill</span></dt>
+        <dd>
+            <a ui-sref="member-mobile-detail({id:vm.memberBill.memberToBill.id})">{{vm.memberBill.memberToBill.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberBill.unitPrepaidCharge">Unit Prepaid Charge</span></dt>
+        <dd>
+            <a ui-sref="trip-rent-units-to-charge-map-detail({id:vm.memberBill.unitPrepaidCharge.id})">{{vm.memberBill.unitPrepaidCharge.typeOfPassOrFare}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,25 @@
+{
+    "ecbikeApp": {
+        "tripRentUnitsToChargeMap" : {
+            "home": {
+                "title": "TripRentUnitsToChargeMaps",
+                "createLabel": "नया Trip Rent Units To Charge Map बनाएँ",
+                "createOrEditLabel": "Trip Rent Units To Charge Map बनाएँ या संपादित करें",
+                "search": "Trip Rent Units To Charge Map खोजें"
+            },
+            "created": "एक नया Trip Rent Units To Charge Map [identifier: {{ param }}] तैयार है",
+            "updated": "एक Trip Rent Units To Charge Map [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Trip Rent Units To Charge Map [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Trip Rent Units To Charge Map [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Trip Rent Units To Charge Map"
+            },
+            "typeOfPassOrFare": "Type Of Pass Or Fare",
+            "prePaidUnits": "Pre Paid Units",
+            "chargesForPaidUnits": "Charges For Paid Units",
+            "expirationPeriodInMonths": "Expiration Period In Months"
+        }
+    }
+}

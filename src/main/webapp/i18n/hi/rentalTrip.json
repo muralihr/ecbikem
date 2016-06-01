@@ -1,0 +1,29 @@
+{
+    "ecbikeApp": {
+        "rentalTrip" : {
+            "home": {
+                "title": "RentalTrips",
+                "createLabel": "नया Rental Trip बनाएँ",
+                "createOrEditLabel": "Rental Trip बनाएँ या संपादित करें",
+                "search": "Rental Trip खोजें"
+            },
+            "created": "एक नया Rental Trip [identifier: {{ param }}] तैयार है",
+            "updated": "एक Rental Trip [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Rental Trip [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Rental Trip [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Rental Trip"
+            },
+            "rentStartTime": "Rent Start Time",
+            "rentStopTime": "Rent Stop Time",
+            "fineApplied": "Fine Applied",
+            "rentedCycle": "Rented Cycle",
+            "customer": "Customer",
+            "startNode": "Start Node",
+            "stopNode": "Stop Node",
+            "rentalCharge": "Rental Charge"
+        }
+    }
+}

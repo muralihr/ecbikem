@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "cycleToStockNodeMapper" : {
+            "home": {
+                "title": "CycleToStockNodeMappers",
+                "createLabel": "नया Cycle To Stock Node Mapper बनाएँ",
+                "createOrEditLabel": "Cycle To Stock Node Mapper बनाएँ या संपादित करें",
+                "search": "Cycle To Stock Node Mapper खोजें"
+            },
+            "created": "एक नया Cycle To Stock Node Mapper [identifier: {{ param }}] तैयार है",
+            "updated": "एक Cycle To Stock Node Mapper [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Cycle To Stock Node Mapper [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Cycle To Stock Node Mapper [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Cycle To Stock Node Mapper"
+            },
+            "nodeDest": "Node Dest",
+            "movedCycle": "Moved Cycle"
+        }
+    }
+}

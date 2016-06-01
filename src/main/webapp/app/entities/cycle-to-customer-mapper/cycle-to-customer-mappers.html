@@ -1,0 +1,83 @@
+<div>
+    <h2 translate="ecbikeApp.cycleToCustomerMapper.home.title">Cycle To Customer Mappers</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="cycle-to-customer-mapper.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="ecbikeApp.cycleToCustomerMapper.home.createLabel">
+                        Create new Cycle To Customer Mapper
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'ecbikeApp.cycleToCustomerMapper.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="rentedCustomer.id"><span translate="ecbikeApp.cycleToCustomerMapper.rentedCustomer">Rented Customer</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="movedCycle.tagId"><span translate="ecbikeApp.cycleToCustomerMapper.movedCycle">Moved Cycle</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cycleToCustomerMapper in vm.cycleToCustomerMappers track by cycleToCustomerMapper.id">
+                    <td><a ui-sref="cycle-to-customer-mapper-detail({id:cycleToCustomerMapper.id})">{{cycleToCustomerMapper.id}}</a></td>
+                    <td>
+                        <a ui-sref="member-mobile-detail({id:cycleToCustomerMapper.rentedCustomer.id})">{{cycleToCustomerMapper.rentedCustomer.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="bicycle-detail({id:cycleToCustomerMapper.movedCycle.id})">{{cycleToCustomerMapper.movedCycle.tagId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="cycle-to-customer-mapper-detail({id:cycleToCustomerMapper.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cycle-to-customer-mapper.edit({id:cycleToCustomerMapper.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cycle-to-customer-mapper.delete({id:cycleToCustomerMapper.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

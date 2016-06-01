@@ -1,0 +1,42 @@
+ 
+
+    <div class="container">
+	
+	
+        <div class="row">
+            <div class="col-sm-5">
+                <label for="aclients">Available Cycles</label>
+                <select size="5" multiple ng-model="available" ng-options="client as client.tagId for client in availableclients" style="width: 400px" class="form-control"></select>
+
+            </div>
+            <div class="col-sm-2">
+				<button type="button" class="btn btn-success" ng-click="moveItem(available[0], availableclients,selectedclients)">Add Cycle</button>
+                <button type="button" class="btn btn-success" ng-click="moveAll(availableclients,selectedclients)">Add All Clients</button>
+                <button type="button" class="btn btn-danger" ng-click="moveItem(selected[0], selectedclients,availableclients)"> Remove Cycle</button>
+                <button type="button" class="btn btn-danger" ng-click="moveAll(selectedclients,availableclients)">Remove All Cycles</button>
+            </div>
+            <div class="col-sm-5">
+			<div class ="row">
+	
+			Select Stock d
+			
+			<select ng-model="selectedStock" ng-options="item.id as item.godownName for item in  stockBufferNodes" ng-change="selectAction(selectedclients)">
+					<option value="">Select Stock</option>
+			</select>
+			
+	 
+			</div>
+                <label for="sclients">Selected Cycles</label>
+                <select size="5" multiple ng-model="selected" ng-options="client as client.tagId for client in selectedclients" style="width: 400px" class="form-control"></select>
+                <div>Selected Clients: {{selectedclients}}</div>
+                <div>Available Clients: {{availableclients}}</div>
+                <div>Selected: {{selected}}</div>
+                <div>Available: {{available}}</div>
+            </div>
+			
+			
+                <button type="button" class="btn btn-primary" ng-click="moveCyclesToSelectedStock(selectedclients,selectedStock)">Move to selected stock <b>{{stockBufferNodes[selectedStock-1].godownName}}</b> -ID :{{selectedStock}}  </button>
+				 
+        </div>
+    </div>
+ 

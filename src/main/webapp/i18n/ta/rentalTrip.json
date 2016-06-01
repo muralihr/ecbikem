@@ -1,0 +1,29 @@
+{
+    "ecbikeApp": {
+        "rentalTrip" : {
+            "home": {
+                "title": "Rental Trips",
+                "createLabel": "Rental Trip-ஐ உருவாக்கு",
+                "createOrEditLabel": "Rental Trip -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Rental Trip"
+            },
+            "created": "Rental Trip புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Rental Trip மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Rental Trip நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Rental Trip {{ id }}?"
+            },
+            "detail": {
+                "title": "Rental Trip"
+            },
+            "rentStartTime": "Rent Start Time",
+            "rentStopTime": "Rent Stop Time",
+            "fineApplied": "Fine Applied",
+            "rentedCycle": "Rented Cycle",
+            "customer": "Customer",
+            "startNode": "Start Node",
+            "stopNode": "Stop Node",
+            "rentalCharge": "Rental Charge"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "ecbikeApp": {
+        "billingNode" : {
+            "home": {
+                "title": "Billing Nodes",
+                "createLabel": "Create a new Billing Node",
+                "createOrEditLabel": "Create or edit a Billing Node",
+                "search": "Search for Billing Node"
+            },
+            "created": "A new Billing Node is created with identifier {{ param }}",
+            "updated": "A Billing Node is updated with identifier {{ param }}",
+            "deleted": "A Billing Node is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Billing Node {{ id }}?"
+            },
+            "detail": {
+                "title": "Billing Node"
+            },
+            "billCenterName": "Bill Center Name",
+            "storageCapacity": "Storage Capacity",
+            "address1": "Address 1",
+            "address2": "Address 2",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "longitudePos": "Longitude Pos",
+            "latitudePos": "Latitude Pos",
+            "colorCode": "Color Code",
+            "billCenterManager": "Bill Center Manager"
+        }
+    }
+}

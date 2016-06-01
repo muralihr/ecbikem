@@ -1,0 +1,32 @@
+{
+    "ecbikeApp": {
+        "stockBufferNode" : {
+            "home": {
+                "title": "Stock Buffer Nodes",
+                "createLabel": "Create a new Stock Buffer Node",
+                "createOrEditLabel": "Create or edit a Stock Buffer Node",
+                "search": "Search for Stock Buffer Node"
+            },
+            "created": "A new Stock Buffer Node is created with identifier {{ param }}",
+            "updated": "A Stock Buffer Node is updated with identifier {{ param }}",
+            "deleted": "A Stock Buffer Node is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Stock Buffer Node {{ id }}?"
+            },
+            "detail": {
+                "title": "Stock Buffer Node"
+            },
+            "godownName": "Godown Name",
+            "storageCapacity": "Storage Capacity",
+            "address1": "Address 1",
+            "address2": "Address 2",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "longitudePos": "Longitude Pos",
+            "latitudePos": "Latitude Pos",
+            "colorCode": "Color Code",
+            "stockManager": "Stock Manager"
+        }
+    }
+}

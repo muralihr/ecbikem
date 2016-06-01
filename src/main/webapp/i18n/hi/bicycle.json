@@ -1,0 +1,28 @@
+{
+    "ecbikeApp": {
+        "bicycle" : {
+            "home": {
+                "title": "Bicycles",
+                "createLabel": "नया Bicycle बनाएँ",
+                "createOrEditLabel": "Bicycle बनाएँ या संपादित करें",
+                "search": "Bicycle खोजें"
+            },
+            "created": "एक नया Bicycle [identifier: {{ param }}] तैयार है",
+            "updated": "एक Bicycle [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Bicycle [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Bicycle [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Bicycle"
+            },
+            "tagId": "Tag Id",
+            "cycleManufacturer": "Cycle Manufacturer",
+            "dateOfPurchase": "Date Of Purchase",
+            "costOfCycle": "Cost Of Cycle",
+            "insuranceNo": "Insurance No",
+            "moveStatus": "Move Status",
+            "insuranceStatus": "Insurance Status"
+        }
+    }
+}

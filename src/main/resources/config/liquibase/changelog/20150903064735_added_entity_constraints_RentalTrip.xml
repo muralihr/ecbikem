@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity RentalTrip.
+    -->
+    <changeSet id="20150903064735-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="rented_cycle_id"
+                                 baseTableName="rental_trip"
+                                 constraintName="fk_rentaltrip_rentedcycle_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bicycle"/>
+
+        <addForeignKeyConstraint baseColumnNames="customer_id"
+                                 baseTableName="rental_trip"
+                                 constraintName="fk_rentaltrip_customer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="member_mobile"/>
+
+        <addForeignKeyConstraint baseColumnNames="start_node_id"
+                                 baseTableName="rental_trip"
+                                 constraintName="fk_rentaltrip_startnode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rental_buffer_node"/>
+
+        <addForeignKeyConstraint baseColumnNames="stop_node_id"
+                                 baseTableName="rental_trip"
+                                 constraintName="fk_rentaltrip_stopnode_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rental_buffer_node"/>
+
+        <addForeignKeyConstraint baseColumnNames="rental_charge_id"
+                                 baseTableName="rental_trip"
+                                 constraintName="fk_rentaltrip_rentalcharge_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hourly_rental_charges"/>
+
+    </changeSet>
+</databaseChangeLog>

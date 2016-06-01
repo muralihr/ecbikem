@@ -1,0 +1,127 @@
+.header-introduction {
+    position: relative;
+    z-index: 2;
+}
+.header-introduction {
+    position: relative;
+    text-align: center;
+    color: #000;
+    }
+
+    .header-headline {
+    font-size: 88px;
+    font-size: 5.5rem;
+}
+.header-headline {
+    font-size: 100px;
+    font-size: 8rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,.5);
+    font-weight: 500;
+}
+.header-subheadline {
+    display: block;
+    content: "Explore - Commute - Ride a Social Bike";
+    width: 100%;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.header-subheadline {
+    font-size: 60px;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    overflow: hidden;
+}
+
+.header-description {
+    margin-bottom: 60px;
+    font-size: 18px;
+    font-size: 2rem;
+}
+.header-description {
+    margin-bottom: 20px;
+    max-width: 590px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav {
+    list-style: none;
+    margin: 0;
+}
+
+.header-accounts > li {
+    margin: 0 5px;
+}
+.nav > li, .nav > li > a {
+    display: inline-block;
+}
+
+.btn {
+    font-size: 36px;
+    font-size: 1.65rem;
+    line-height: 60px;
+    height: 60px;
+}
+.btn {
+    display: inline-block;
+    height: 36px;
+    overflow: hidden;
+    padding: 0 20px;
+    border: 0;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+    background-color: #39d803;
+    cursor: pointer;
+    margin-left: 750px;
+    margin-right: 750px;
+}
+.btn1 {
+    display: inline-block;
+    height: 36px;
+    overflow: hidden;
+    padding: 0 20px;
+    border: 0;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+    background-color: #39d803;
+    cursor: pointer;
+
+}
+.header-accounts > li > .btn.btn--bold {
+    font-weight: 700;
+}
+.nav > li, .nav > li > a {
+    display: inline-block;
+}
+
+.btn--brown {
+    background-color: #2a2926;
+}
+.header-accounts > li > .btn.btn--bold { font-weight: 700; }

@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "cycleToRentalNodeMapper" : {
+            "home": {
+                "title": "Cycle To Rental Node Mappers",
+                "createLabel": "Cycle To Rental Node Mapper-ஐ உருவாக்கு",
+                "createOrEditLabel": "Cycle To Rental Node Mapper -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Cycle To Rental Node Mapper"
+            },
+            "created": "Cycle To Rental Node Mapper புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Cycle To Rental Node Mapper மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Cycle To Rental Node Mapper நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Cycle To Rental Node Mapper {{ id }}?"
+            },
+            "detail": {
+                "title": "Cycle To Rental Node Mapper"
+            },
+            "nodeDest": "Node Dest",
+            "movedCycle": "Moved Cycle"
+        }
+    }
+}

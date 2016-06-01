@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "cycleToStockNodeMapper" : {
+            "home": {
+                "title": "Cycle To Stock Node Mappers",
+                "createLabel": "Cycle To Stock Node Mapper-ஐ உருவாக்கு",
+                "createOrEditLabel": "Cycle To Stock Node Mapper -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Cycle To Stock Node Mapper"
+            },
+            "created": "Cycle To Stock Node Mapper புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Cycle To Stock Node Mapper மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Cycle To Stock Node Mapper நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Cycle To Stock Node Mapper {{ id }}?"
+            },
+            "detail": {
+                "title": "Cycle To Stock Node Mapper"
+            },
+            "nodeDest": "Node Dest",
+            "movedCycle": "Moved Cycle"
+        }
+    }
+}

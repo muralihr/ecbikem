@@ -1,0 +1,32 @@
+{
+    "ecbikeApp": {
+        "stockBufferNode" : {
+            "home": {
+                "title": "StockBufferNodes",
+                "createLabel": "नया Stock Buffer Node बनाएँ",
+                "createOrEditLabel": "Stock Buffer Node बनाएँ या संपादित करें",
+                "search": "Stock Buffer Node खोजें"
+            },
+            "created": "एक नया Stock Buffer Node [identifier: {{ param }}] तैयार है",
+            "updated": "एक Stock Buffer Node [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Stock Buffer Node [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Stock Buffer Node [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Stock Buffer Node"
+            },
+            "godownName": "Godown Name",
+            "storageCapacity": "Storage Capacity",
+            "address1": "Address 1",
+            "address2": "Address 2",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "longitudePos": "Longitude Pos",
+            "latitudePos": "Latitude Pos",
+            "colorCode": "Color Code",
+            "stockManager": "Stock Manager"
+        }
+    }
+}

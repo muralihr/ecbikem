@@ -1,0 +1,28 @@
+{
+    "ecbikeApp": {
+        "bicycle" : {
+            "home": {
+                "title": "Bicycles",
+                "createLabel": "Bicycle-ஐ உருவாக்கு",
+                "createOrEditLabel": "Bicycle -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Bicycle"
+            },
+            "created": "Bicycle புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Bicycle மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Bicycle நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Bicycle {{ id }}?"
+            },
+            "detail": {
+                "title": "Bicycle"
+            },
+            "tagId": "Tag Id",
+            "cycleManufacturer": "Cycle Manufacturer",
+            "dateOfPurchase": "Date Of Purchase",
+            "costOfCycle": "Cost Of Cycle",
+            "insuranceNo": "Insurance No",
+            "moveStatus": "Move Status",
+            "insuranceStatus": "Insurance Status"
+        }
+    }
+}

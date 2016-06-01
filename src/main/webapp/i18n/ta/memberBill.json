@@ -1,0 +1,25 @@
+{
+    "ecbikeApp": {
+        "memberBill" : {
+            "home": {
+                "title": "Member Bills",
+                "createLabel": "Member Bill-ஐ உருவாக்கு",
+                "createOrEditLabel": "Member Bill -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Member Bill"
+            },
+            "created": "Member Bill புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Member Bill மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Member Bill நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Member Bill {{ id }}?"
+            },
+            "detail": {
+                "title": "Member Bill"
+            },
+            "dateOfPayment": "Date Of Payment",
+            "billCenter": "Bill Center",
+            "memberToBill": "Member To Bill",
+            "unitPrepaidCharge": "Unit Prepaid Charge"
+        }
+    }
+}

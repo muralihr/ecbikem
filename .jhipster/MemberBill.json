@@ -1,0 +1,38 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "billCenter",
+            "otherEntityName": "billingNode",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "billCenterName"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "memberToBill",
+            "otherEntityName": "memberMobile",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "unitPrepaidCharge",
+            "otherEntityName": "tripRentUnitsToChargeMap",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "typeOfPassOrFare"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "dateOfPayment",
+            "fieldType": "DateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20150829120800",
+    "dto": "no",
+    "pagination": "pagination"
+}

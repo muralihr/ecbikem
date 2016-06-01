@@ -1,0 +1,28 @@
+{
+    "ecbikeApp": {
+        "bicycle" : {
+            "home": {
+                "title": "Bicycles",
+                "createLabel": "Create a new Bicycle",
+                "createOrEditLabel": "Create or edit a Bicycle",
+                "search": "Search for Bicycle"
+            },
+            "created": "A new Bicycle is created with identifier {{ param }}",
+            "updated": "A Bicycle is updated with identifier {{ param }}",
+            "deleted": "A Bicycle is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bicycle {{ id }}?"
+            },
+            "detail": {
+                "title": "Bicycle"
+            },
+            "tagId": "Tag Id",
+            "cycleManufacturer": "Cycle Manufacturer",
+            "dateOfPurchase": "Date Of Purchase",
+            "costOfCycle": "Cost Of Cycle",
+            "insuranceNo": "Insurance No",
+            "moveStatus": "Move Status",
+            "insuranceStatus": "Insurance Status"
+        }
+    }
+}

@@ -1,0 +1,160 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myStockBufferNodeLabel" translate="ecbikeApp.stockBufferNode.home.createOrEditLabel">Create or edit a Stock Buffer Node</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.stockBufferNode.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.stockBufferNode.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.godownName" for="field_godownName">Godown Name</label>
+            <input type="text" class="form-control" name="godownName" id="field_godownName"
+                    ng-model="vm.stockBufferNode.godownName"
+                    required />
+            <div ng-show="editForm.godownName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.godownName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.storageCapacity" for="field_storageCapacity">Storage Capacity</label>
+            <input type="text" class="form-control" name="storageCapacity" id="field_storageCapacity"
+                    ng-model="vm.stockBufferNode.storageCapacity"
+                    required />
+            <div ng-show="editForm.storageCapacity.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.storageCapacity.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.address1" for="field_address1">Address 1</label>
+            <input type="text" class="form-control" name="address1" id="field_address1"
+                    ng-model="vm.stockBufferNode.address1"
+                    required />
+            <div ng-show="editForm.address1.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.address1.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.address2" for="field_address2">Address 2</label>
+            <input type="text" class="form-control" name="address2" id="field_address2"
+                    ng-model="vm.stockBufferNode.address2"
+                    required />
+            <div ng-show="editForm.address2.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.address2.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="vm.stockBufferNode.city"
+                    required />
+            <div ng-show="editForm.city.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.city.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.state" for="field_state">State</label>
+            <input type="text" class="form-control" name="state" id="field_state"
+                    ng-model="vm.stockBufferNode.state"
+                    required />
+            <div ng-show="editForm.state.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.state.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.zipcode" for="field_zipcode">Zipcode</label>
+            <input type="text" class="form-control" name="zipcode" id="field_zipcode"
+                    ng-model="vm.stockBufferNode.zipcode"
+                    required />
+            <div ng-show="editForm.zipcode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.zipcode.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.longitudePos" for="field_longitudePos">Longitude Pos</label>
+            <input type="number" class="form-control" name="longitudePos" id="field_longitudePos"
+                    ng-model="vm.stockBufferNode.longitudePos"
+                    required />
+            <div ng-show="editForm.longitudePos.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.longitudePos.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.longitudePos.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.latitudePos" for="field_latitudePos">Latitude Pos</label>
+            <input type="number" class="form-control" name="latitudePos" id="field_latitudePos"
+                    ng-model="vm.stockBufferNode.latitudePos"
+                    required />
+            <div ng-show="editForm.latitudePos.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.latitudePos.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.latitudePos.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.stockBufferNode.colorCode" for="field_colorCode">Color Code</label>
+            <input type="text" class="form-control" name="colorCode" id="field_colorCode"
+                    ng-model="vm.stockBufferNode.colorCode"
+                    required />
+            <div ng-show="editForm.colorCode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.colorCode.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="ecbikeApp.stockBufferNode.stockManager" for="field_stockManager">Stock Manager</label>
+            <select class="form-control" id="field_stockManager" name="stockManager" ng-model="vm.stockBufferNode.stockManager" ng-options="user as user.firstName for user in vm.users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

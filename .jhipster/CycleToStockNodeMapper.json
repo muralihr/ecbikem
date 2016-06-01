@@ -1,0 +1,22 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "nodeDest",
+            "otherEntityName": "stockBufferNode",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "movedCycle",
+            "otherEntityName": "bicycle",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "tagId"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20150829163710",
+    "dto": "no",
+    "pagination": "pager"
+}

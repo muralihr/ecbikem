@@ -1,0 +1,22 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "rentedCustomer",
+            "otherEntityName": "memberMobile",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "movedCycle",
+            "otherEntityName": "bicycle",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "tagId"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20150902144918",
+    "dto": "no",
+    "pagination": "pager"
+}

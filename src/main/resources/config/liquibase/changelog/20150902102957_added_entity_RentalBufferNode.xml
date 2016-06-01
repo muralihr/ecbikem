@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle"/>
+
+    <!--
+        Added the entity RentalBufferNode.
+    -->
+    <changeSet id="20150902102957-1" author="jhipster">
+        <createTable tableName="rental_buffer_node">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="station_name" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="address_1" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="address_2" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="city" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="state" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="zipcode" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="longitude_pos" type="double">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="latitude_pos" type="double">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="color_code" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="photo_of_location" type="longblob">
+                <constraints nullable="false" />
+            </column>
+            <column name="photo_of_location_content_type" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="node_manager_id" type="bigint"/>
+            <!-- jhipster-needle-liquibase-add-column - Jhipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+</databaseChangeLog>

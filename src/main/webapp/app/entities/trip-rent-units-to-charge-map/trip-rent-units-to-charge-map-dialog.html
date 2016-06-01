@@ -1,0 +1,86 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTripRentUnitsToChargeMapLabel" translate="ecbikeApp.tripRentUnitsToChargeMap.home.createOrEditLabel">Create or edit a Trip Rent Units To Charge Map</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.tripRentUnitsToChargeMap.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.tripRentUnitsToChargeMap.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.tripRentUnitsToChargeMap.typeOfPassOrFare" for="field_typeOfPassOrFare">Type Of Pass Or Fare</label>
+            <input type="text" class="form-control" name="typeOfPassOrFare" id="field_typeOfPassOrFare"
+                    ng-model="vm.tripRentUnitsToChargeMap.typeOfPassOrFare"
+                    required />
+            <div ng-show="editForm.typeOfPassOrFare.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.typeOfPassOrFare.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.tripRentUnitsToChargeMap.prePaidUnits" for="field_prePaidUnits">Pre Paid Units</label>
+            <input type="number" class="form-control" name="prePaidUnits" id="field_prePaidUnits"
+                    ng-model="vm.tripRentUnitsToChargeMap.prePaidUnits"
+                    required />
+            <div ng-show="editForm.prePaidUnits.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.prePaidUnits.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.prePaidUnits.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.tripRentUnitsToChargeMap.chargesForPaidUnits" for="field_chargesForPaidUnits">Charges For Paid Units</label>
+            <input type="number" class="form-control" name="chargesForPaidUnits" id="field_chargesForPaidUnits"
+                    ng-model="vm.tripRentUnitsToChargeMap.chargesForPaidUnits"
+                    required />
+            <div ng-show="editForm.chargesForPaidUnits.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.chargesForPaidUnits.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.chargesForPaidUnits.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.tripRentUnitsToChargeMap.expirationPeriodInMonths" for="field_expirationPeriodInMonths">Expiration Period In Months</label>
+            <input type="number" class="form-control" name="expirationPeriodInMonths" id="field_expirationPeriodInMonths"
+                    ng-model="vm.tripRentUnitsToChargeMap.expirationPeriodInMonths"
+                    required />
+            <div ng-show="editForm.expirationPeriodInMonths.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.expirationPeriodInMonths.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.expirationPeriodInMonths.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

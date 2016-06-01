@@ -1,0 +1,23 @@
+
+<div>
+    <h2><span translate="ecbikeApp.hourlyRentalCharges.detail.title">Hourly Rental Charges</span> {{vm.hourlyRentalCharges.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="ecbikeApp.hourlyRentalCharges.deductableUnits">Deductable Units</span></dt>
+        <dd>
+            <span>{{vm.hourlyRentalCharges.deductableUnits}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.hourlyRentalCharges.rentedHours">Rented Hours</span></dt>
+        <dd>
+            <span>{{vm.hourlyRentalCharges.rentedHours}}</span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

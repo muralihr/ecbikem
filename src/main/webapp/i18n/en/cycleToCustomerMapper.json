@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "cycleToCustomerMapper" : {
+            "home": {
+                "title": "Cycle To Customer Mappers",
+                "createLabel": "Create a new Cycle To Customer Mapper",
+                "createOrEditLabel": "Create or edit a Cycle To Customer Mapper",
+                "search": "Search for Cycle To Customer Mapper"
+            },
+            "created": "A new Cycle To Customer Mapper is created with identifier {{ param }}",
+            "updated": "A Cycle To Customer Mapper is updated with identifier {{ param }}",
+            "deleted": "A Cycle To Customer Mapper is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cycle To Customer Mapper {{ id }}?"
+            },
+            "detail": {
+                "title": "Cycle To Customer Mapper"
+            },
+            "rentedCustomer": "Rented Customer",
+            "movedCycle": "Moved Cycle"
+        }
+    }
+}

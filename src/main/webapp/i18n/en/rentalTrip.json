@@ -1,0 +1,29 @@
+{
+    "ecbikeApp": {
+        "rentalTrip" : {
+            "home": {
+                "title": "Rental Trips",
+                "createLabel": "Create a new Rental Trip",
+                "createOrEditLabel": "Create or edit a Rental Trip",
+                "search": "Search for Rental Trip"
+            },
+            "created": "A new Rental Trip is created with identifier {{ param }}",
+            "updated": "A Rental Trip is updated with identifier {{ param }}",
+            "deleted": "A Rental Trip is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Rental Trip {{ id }}?"
+            },
+            "detail": {
+                "title": "Rental Trip"
+            },
+            "rentStartTime": "Rent Start Time",
+            "rentStopTime": "Rent Stop Time",
+            "fineApplied": "Fine Applied",
+            "rentedCycle": "Rented Cycle",
+            "customer": "Customer",
+            "startNode": "Start Node",
+            "stopNode": "Stop Node",
+            "rentalCharge": "Rental Charge"
+        }
+    }
+}

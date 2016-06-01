@@ -1,0 +1,32 @@
+{
+    "ecbikeApp": {
+        "rentalBufferNode" : {
+            "home": {
+                "title": "Rental Buffer Nodes",
+                "createLabel": "Create a new Rental Buffer Node",
+                "createOrEditLabel": "Create or edit a Rental Buffer Node",
+                "search": "Search for Rental Buffer Node"
+            },
+            "created": "A new Rental Buffer Node is created with identifier {{ param }}",
+            "updated": "A Rental Buffer Node is updated with identifier {{ param }}",
+            "deleted": "A Rental Buffer Node is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Rental Buffer Node {{ id }}?"
+            },
+            "detail": {
+                "title": "Rental Buffer Node"
+            },
+            "stationName": "Station Name",
+            "address1": "Address 1",
+            "address2": "Address 2",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "longitudePos": "Longitude Pos",
+            "latitudePos": "Latitude Pos",
+            "colorCode": "Color Code",
+            "photoOfLocation": "Photo Of Location",
+            "nodeManager": "Node Manager"
+        }
+    }
+}

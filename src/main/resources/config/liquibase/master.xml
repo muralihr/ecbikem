@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160523073201_added_entity_TypeOfIDCard.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150902100027_added_entity_Bicycle.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150902144145_added_entity_MemberMobile.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829113930_added_entity_BillingNode.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150902102957_added_entity_RentalBufferNode.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829114339_added_entity_TripRentUnitsToChargeMap.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829120800_added_entity_MemberBill.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829122900_added_entity_StockBufferNode.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829164155_added_entity_HourlyRentalCharges.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150903064735_added_entity_RentalTrip.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829163710_added_entity_CycleToStockNodeMapper.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829163453_added_entity_CycleToRentalNodeMapper.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150902144918_added_entity_CycleToCustomerMapper.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20150829113930_added_entity_constraints_BillingNode.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150902102957_added_entity_constraints_RentalBufferNode.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829120800_added_entity_constraints_MemberBill.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829122900_added_entity_constraints_StockBufferNode.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150903064735_added_entity_constraints_RentalTrip.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829163710_added_entity_constraints_CycleToStockNodeMapper.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150829163453_added_entity_constraints_CycleToRentalNodeMapper.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20150902144918_added_entity_constraints_CycleToCustomerMapper.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

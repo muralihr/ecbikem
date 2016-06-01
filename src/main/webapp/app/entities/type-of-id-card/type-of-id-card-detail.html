@@ -1,0 +1,23 @@
+
+<div>
+    <h2><span translate="ecbikeApp.typeOfIDCard.detail.title">Type Of Id Card</span> {{vm.typeOfIDCard.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="ecbikeApp.typeOfIDCard.authorizedIDName">Authorized Id Name</span></dt>
+        <dd>
+            <span>{{vm.typeOfIDCard.authorizedIDName}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.typeOfIDCard.authorizationAgency">Authorization Agency</span></dt>
+        <dd>
+            <span>{{vm.typeOfIDCard.authorizationAgency}}</span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "cycleToCustomerMapper" : {
+            "home": {
+                "title": "Cycle To Customer Mappers",
+                "createLabel": "Cycle To Customer Mapper-ஐ உருவாக்கு",
+                "createOrEditLabel": "Cycle To Customer Mapper -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Cycle To Customer Mapper"
+            },
+            "created": "Cycle To Customer Mapper புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Cycle To Customer Mapper மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Cycle To Customer Mapper நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Cycle To Customer Mapper {{ id }}?"
+            },
+            "detail": {
+                "title": "Cycle To Customer Mapper"
+            },
+            "rentedCustomer": "Rented Customer",
+            "movedCycle": "Moved Cycle"
+        }
+    }
+}

@@ -1,0 +1,58 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myHourlyRentalChargesLabel" translate="ecbikeApp.hourlyRentalCharges.home.createOrEditLabel">Create or edit a Hourly Rental Charges</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.hourlyRentalCharges.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.hourlyRentalCharges.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.hourlyRentalCharges.deductableUnits" for="field_deductableUnits">Deductable Units</label>
+            <input type="number" class="form-control" name="deductableUnits" id="field_deductableUnits"
+                    ng-model="vm.hourlyRentalCharges.deductableUnits"
+                    required />
+            <div ng-show="editForm.deductableUnits.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.deductableUnits.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.deductableUnits.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.hourlyRentalCharges.rentedHours" for="field_rentedHours">Rented Hours</label>
+            <input type="number" class="form-control" name="rentedHours" id="field_rentedHours"
+                    ng-model="vm.hourlyRentalCharges.rentedHours"
+                    required />
+            <div ng-show="editForm.rentedHours.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.rentedHours.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.rentedHours.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

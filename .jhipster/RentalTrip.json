@@ -1,0 +1,65 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "rentedCycle",
+            "otherEntityName": "bicycle",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "tagId"
+        },
+        {
+            "relationshipId": 2,
+            "relationshipName": "customer",
+            "otherEntityName": "memberMobile",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipId": 3,
+            "relationshipName": "startNode",
+            "otherEntityName": "rentalBufferNode",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "stationName"
+        },
+        {
+            "relationshipId": 4,
+            "relationshipName": "stopNode",
+            "otherEntityName": "rentalBufferNode",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "stationName"
+        },
+        {
+            "relationshipId": 5,
+            "relationshipName": "rentalCharge",
+            "otherEntityName": "hourlyRentalCharges",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "rentStartTime",
+            "fieldType": "DateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "rentStopTime",
+            "fieldType": "DateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "fineApplied",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20150903064735",
+    "dto": "no",
+    "pagination": "pagination"
+}

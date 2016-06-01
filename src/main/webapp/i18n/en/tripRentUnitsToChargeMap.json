@@ -1,0 +1,25 @@
+{
+    "ecbikeApp": {
+        "tripRentUnitsToChargeMap" : {
+            "home": {
+                "title": "Trip Rent Units To Charge Maps",
+                "createLabel": "Create a new Trip Rent Units To Charge Map",
+                "createOrEditLabel": "Create or edit a Trip Rent Units To Charge Map",
+                "search": "Search for Trip Rent Units To Charge Map"
+            },
+            "created": "A new Trip Rent Units To Charge Map is created with identifier {{ param }}",
+            "updated": "A Trip Rent Units To Charge Map is updated with identifier {{ param }}",
+            "deleted": "A Trip Rent Units To Charge Map is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Trip Rent Units To Charge Map {{ id }}?"
+            },
+            "detail": {
+                "title": "Trip Rent Units To Charge Map"
+            },
+            "typeOfPassOrFare": "Type Of Pass Or Fare",
+            "prePaidUnits": "Pre Paid Units",
+            "chargesForPaidUnits": "Charges For Paid Units",
+            "expirationPeriodInMonths": "Expiration Period In Months"
+        }
+    }
+}

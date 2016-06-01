@@ -1,0 +1,134 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBicycleLabel" translate="ecbikeApp.bicycle.home.createOrEditLabel">Create or edit a Bicycle</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.bicycle.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.bicycle.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.bicycle.tagId" for="field_tagId">Tag Id</label>
+            <input type="text" class="form-control" name="tagId" id="field_tagId"
+                    ng-model="vm.bicycle.tagId"
+                    required />
+            <div ng-show="editForm.tagId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tagId.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.bicycle.cycleManufacturer" for="field_cycleManufacturer">Cycle Manufacturer</label>
+            <input type="text" class="form-control" name="cycleManufacturer" id="field_cycleManufacturer"
+                    ng-model="vm.bicycle.cycleManufacturer"
+                    required ng-minlength="1" ng-maxlength="20" />
+            <div ng-show="editForm.cycleManufacturer.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cycleManufacturer.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.cycleManufacturer.$error.minlength" translate="entity.validation.minlength" translate-value-min="1">
+                    This field is required to be at least 1 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.cycleManufacturer.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.bicycle.dateOfPurchase" for="field_dateOfPurchase">Date Of Purchase</label>
+                <div class="input-group">
+                    <input id="field_dateOfPurchase" type="text" class="form-control" name="dateOfPurchase" uib-datepicker-popup="{{dateformat}}" ng-model="vm.bicycle.dateOfPurchase" is-open="vm.datePickerOpenStatus.dateOfPurchase"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateOfPurchase')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.dateOfPurchase.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.dateOfPurchase.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.bicycle.costOfCycle" for="field_costOfCycle">Cost Of Cycle</label>
+            <input type="number" class="form-control" name="costOfCycle" id="field_costOfCycle"
+                    ng-model="vm.bicycle.costOfCycle"
+                    required />
+            <div ng-show="editForm.costOfCycle.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.costOfCycle.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.costOfCycle.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.bicycle.insuranceNo" for="field_insuranceNo">Insurance No</label>
+            <input type="text" class="form-control" name="insuranceNo" id="field_insuranceNo"
+                    ng-model="vm.bicycle.insuranceNo"
+                    required />
+            <div ng-show="editForm.insuranceNo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.insuranceNo.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.bicycle.moveStatus" for="field_moveStatus">Move Status</label>
+            <input type="number" class="form-control" name="moveStatus" id="field_moveStatus"
+                    ng-model="vm.bicycle.moveStatus"
+                    required />
+            <div ng-show="editForm.moveStatus.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.moveStatus.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.moveStatus.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.bicycle.insuranceStatus" for="field_insuranceStatus">Insurance Status</label>
+            <input type="number" class="form-control" name="insuranceStatus" id="field_insuranceStatus"
+                    ng-model="vm.bicycle.insuranceStatus"
+                    required />
+            <div ng-show="editForm.insuranceStatus.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.insuranceStatus.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.insuranceStatus.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

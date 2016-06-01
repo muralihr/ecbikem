@@ -1,0 +1,25 @@
+{
+    "ecbikeApp": {
+        "memberBill" : {
+            "home": {
+                "title": "MemberBills",
+                "createLabel": "नया Member Bill बनाएँ",
+                "createOrEditLabel": "Member Bill बनाएँ या संपादित करें",
+                "search": "Member Bill खोजें"
+            },
+            "created": "एक नया Member Bill [identifier: {{ param }}] तैयार है",
+            "updated": "एक Member Bill [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Member Bill [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Member Bill [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Member Bill"
+            },
+            "dateOfPayment": "Date Of Payment",
+            "billCenter": "Bill Center",
+            "memberToBill": "Member To Bill",
+            "unitPrepaidCharge": "Unit Prepaid Charge"
+        }
+    }
+}

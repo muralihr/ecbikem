@@ -1,0 +1,23 @@
+
+<div>
+    <h2><span translate="ecbikeApp.cycleToCustomerMapper.detail.title">Cycle To Customer Mapper</span> {{vm.cycleToCustomerMapper.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="ecbikeApp.cycleToCustomerMapper.rentedCustomer">Rented Customer</span></dt>
+        <dd>
+            <a ui-sref="member-mobile-detail({id:vm.cycleToCustomerMapper.rentedCustomer.id})">{{vm.cycleToCustomerMapper.rentedCustomer.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.cycleToCustomerMapper.movedCycle">Moved Cycle</span></dt>
+        <dd>
+            <a ui-sref="bicycle-detail({id:vm.cycleToCustomerMapper.movedCycle.id})">{{vm.cycleToCustomerMapper.movedCycle.tagId}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

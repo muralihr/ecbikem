@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity CycleToRentalNodeMapper.
+    -->
+    <changeSet id="20150829163453-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="node_dest_id"
+                                 baseTableName="cycle_to_rental_node_mapper"
+                                 constraintName="fk_cycletorentalnodemapper_nodedest_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rental_buffer_node"/>
+
+        <addForeignKeyConstraint baseColumnNames="moved_cycle_id"
+                                 baseTableName="cycle_to_rental_node_mapper"
+                                 constraintName="fk_cycletorentalnodemapper_movedcycle_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="bicycle"/>
+
+    </changeSet>
+</databaseChangeLog>

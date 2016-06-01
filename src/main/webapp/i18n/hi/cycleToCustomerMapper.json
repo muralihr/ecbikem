@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "cycleToCustomerMapper" : {
+            "home": {
+                "title": "CycleToCustomerMappers",
+                "createLabel": "नया Cycle To Customer Mapper बनाएँ",
+                "createOrEditLabel": "Cycle To Customer Mapper बनाएँ या संपादित करें",
+                "search": "Cycle To Customer Mapper खोजें"
+            },
+            "created": "एक नया Cycle To Customer Mapper [identifier: {{ param }}] तैयार है",
+            "updated": "एक Cycle To Customer Mapper [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Cycle To Customer Mapper [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Cycle To Customer Mapper [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Cycle To Customer Mapper"
+            },
+            "rentedCustomer": "Rented Customer",
+            "movedCycle": "Moved Cycle"
+        }
+    }
+}

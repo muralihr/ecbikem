@@ -1,0 +1,32 @@
+{
+    "ecbikeApp": {
+        "billingNode" : {
+            "home": {
+                "title": "BillingNodes",
+                "createLabel": "नया Billing Node बनाएँ",
+                "createOrEditLabel": "Billing Node बनाएँ या संपादित करें",
+                "search": "Billing Node खोजें"
+            },
+            "created": "एक नया Billing Node [identifier: {{ param }}] तैयार है",
+            "updated": "एक Billing Node [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Billing Node [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Billing Node [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Billing Node"
+            },
+            "billCenterName": "Bill Center Name",
+            "storageCapacity": "Storage Capacity",
+            "address1": "Address 1",
+            "address2": "Address 2",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "longitudePos": "Longitude Pos",
+            "latitudePos": "Latitude Pos",
+            "colorCode": "Color Code",
+            "billCenterManager": "Bill Center Manager"
+        }
+    }
+}

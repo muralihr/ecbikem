@@ -1,0 +1,21 @@
+version: '2'
+services:
+    ecbike-app:
+        image: ecbike
+        external_links:
+            - ecbike-mysql:mysql
+            - ecbike-elasticsearch:elasticsearch
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/ecbike?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=elasticsearch:9300
+        ports:
+            - 8080:8080
+    ecbike-mysql:
+        extends:
+            file: mysql.yml
+            service: ecbike-mysql
+    ecbike-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: ecbike-elasticsearch

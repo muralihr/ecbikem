@@ -1,0 +1,110 @@
+<div>
+    <h2 translate="ecbikeApp.billingNode.home.title">Billing Nodes</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+    	<div id='map'></div>
+    
+    		<div class="row">
+
+            	<div class="col-md-10">
+                    <leaflet lf-center="center" tiles="tiles" geojson="geojson" width="115%" height="600px" markers="markers" event-broadcast="events"></leaflet>
+  						<pre ng-bind="layers | json"></pre>
+                  <h4> Latitude  {{  lat2 }}</h4>
+                <h4> Longitude  {{ lng2 }}</h4> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="billing-node.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="ecbikeApp.billingNode.home.createLabel">
+                        Create new Billing Node
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'ecbikeApp.billingNode.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="billCenterName"><span translate="ecbikeApp.billingNode.billCenterName">Bill Center Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="storageCapacity"><span translate="ecbikeApp.billingNode.storageCapacity">Storage Capacity</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="address1"><span translate="ecbikeApp.billingNode.address1">Address 1</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="address2"><span translate="ecbikeApp.billingNode.address2">Address 2</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="city"><span translate="ecbikeApp.billingNode.city">City</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="state"><span translate="ecbikeApp.billingNode.state">State</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="zipcode"><span translate="ecbikeApp.billingNode.zipcode">Zipcode</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="longitudePos"><span translate="ecbikeApp.billingNode.longitudePos">Longitude Pos</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="latitudePos"><span translate="ecbikeApp.billingNode.latitudePos">Latitude Pos</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="colorCode"><span translate="ecbikeApp.billingNode.colorCode">Color Code</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="billCenterManager.firstName"><span translate="ecbikeApp.billingNode.billCenterManager">Bill Center Manager</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="billingNode in vm.billingNodes track by billingNode.id">
+                    <td><a ui-sref="billing-node-detail({id:billingNode.id})">{{billingNode.id}}</a></td>
+                    <td>{{billingNode.billCenterName}}</td>
+                    <td>{{billingNode.storageCapacity}}</td>
+                    <td>{{billingNode.address1}}</td>
+                    <td>{{billingNode.address2}}</td>
+                    <td>{{billingNode.city}}</td>
+                    <td>{{billingNode.state}}</td>
+                    <td>{{billingNode.zipcode}}</td>
+                    <td>{{billingNode.longitudePos}}</td>
+                    <td>{{billingNode.latitudePos}}</td>
+                    <td>{{billingNode.colorCode}}</td>
+                    <td>
+                        {{billingNode.billCenterManager.firstName}}
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="billing-node-detail({id:billingNode.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="billing-node.edit({id:billingNode.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="billing-node.delete({id:billingNode.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

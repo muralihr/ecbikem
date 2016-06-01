@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "cycleToRentalNodeMapper" : {
+            "home": {
+                "title": "Cycle To Rental Node Mappers",
+                "createLabel": "Create a new Cycle To Rental Node Mapper",
+                "createOrEditLabel": "Create or edit a Cycle To Rental Node Mapper",
+                "search": "Search for Cycle To Rental Node Mapper"
+            },
+            "created": "A new Cycle To Rental Node Mapper is created with identifier {{ param }}",
+            "updated": "A Cycle To Rental Node Mapper is updated with identifier {{ param }}",
+            "deleted": "A Cycle To Rental Node Mapper is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cycle To Rental Node Mapper {{ id }}?"
+            },
+            "detail": {
+                "title": "Cycle To Rental Node Mapper"
+            },
+            "nodeDest": "Node Dest",
+            "movedCycle": "Moved Cycle"
+        }
+    }
+}

@@ -1,0 +1,52 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "emailId",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "phoneNum",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "supportType",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "message",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+	    {
+            "fieldId":6,
+            "fieldName": "readAndResolved",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                 
+            ]
+        } 
+    ],
+    "changelogDate": "20151006084213",
+    "dto": "no",
+    "pagination": "pagination"
+}

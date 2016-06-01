@@ -1,0 +1,42 @@
+{
+    "ecbikeApp": {
+        "memberMobile" : {
+            "home": {
+                "title": "MemberMobiles",
+                "createLabel": "नया Member Mobile बनाएँ",
+                "createOrEditLabel": "Member Mobile बनाएँ या संपादित करें",
+                "search": "Member Mobile खोजें"
+            },
+            "created": "एक नया Member Mobile [identifier: {{ param }}] तैयार है",
+            "updated": "एक Member Mobile [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Member Mobile [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Member Mobile [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Member Mobile"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "dateOfBirth": "Date Of Birth",
+            "emailId": "Email Id",
+            "mobileNo": "Mobile No",
+            "address1": "Address 1",
+            "address2": "Address 2",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "country": "Country",
+            "photo": "Photo",
+            "photoIDProof": "Photo Id Proof",
+            "myCurrentRentUnits": "My Current Rent Units",
+            "myChargedRentUnits": "My Charged Rent Units",
+            "behaviorStatus": "Behavior Status",
+            "myCurrentFineCharges": "My Current Fine Charges",
+            "dateOfExpiration": "Date Of Expiration",
+            "userName": "User Name",
+            "passWord": "Pass Word",
+            "activated": "Activated"
+        }
+    }
+}

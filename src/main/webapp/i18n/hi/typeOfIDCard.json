@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "typeOfIDCard" : {
+            "home": {
+                "title": "TypeOfIDCards",
+                "createLabel": "नया Type Of Id Card बनाएँ",
+                "createOrEditLabel": "Type Of Id Card बनाएँ या संपादित करें",
+                "search": "Type Of Id Card खोजें"
+            },
+            "created": "एक नया Type Of Id Card [identifier: {{ param }}] तैयार है",
+            "updated": "एक Type Of Id Card [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Type Of Id Card [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Type Of Id Card [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Type Of Id Card"
+            },
+            "authorizedIDName": "Authorized Id Name",
+            "authorizationAgency": "Authorization Agency"
+        }
+    }
+}

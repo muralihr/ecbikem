@@ -1,0 +1,25 @@
+{
+    "ecbikeApp": {
+        "tripRentUnitsToChargeMap" : {
+            "home": {
+                "title": "Trip Rent Units To Charge Maps",
+                "createLabel": "Trip Rent Units To Charge Map-ஐ உருவாக்கு",
+                "createOrEditLabel": "Trip Rent Units To Charge Map -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Trip Rent Units To Charge Map"
+            },
+            "created": "Trip Rent Units To Charge Map புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Trip Rent Units To Charge Map மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Trip Rent Units To Charge Map நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Trip Rent Units To Charge Map {{ id }}?"
+            },
+            "detail": {
+                "title": "Trip Rent Units To Charge Map"
+            },
+            "typeOfPassOrFare": "Type Of Pass Or Fare",
+            "prePaidUnits": "Pre Paid Units",
+            "chargesForPaidUnits": "Charges For Paid Units",
+            "expirationPeriodInMonths": "Expiration Period In Months"
+        }
+    }
+}

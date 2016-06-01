@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "hourlyRentalCharges" : {
+            "home": {
+                "title": "HourlyRentalCharges",
+                "createLabel": "नया Hourly Rental Charges बनाएँ",
+                "createOrEditLabel": "Hourly Rental Charges बनाएँ या संपादित करें",
+                "search": "Hourly Rental Charges खोजें"
+            },
+            "created": "एक नया Hourly Rental Charges [identifier: {{ param }}] तैयार है",
+            "updated": "एक Hourly Rental Charges [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Hourly Rental Charges [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Hourly Rental Charges [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Hourly Rental Charges"
+            },
+            "deductableUnits": "Deductable Units",
+            "rentedHours": "Rented Hours"
+        }
+    }
+}

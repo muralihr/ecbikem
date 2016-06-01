@@ -1,0 +1,53 @@
+
+<div>
+    <h2><span translate="ecbikeApp.rentalTrip.detail.title">Rental Trip</span> {{vm.rentalTrip.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="ecbikeApp.rentalTrip.rentStartTime">Rent Start Time</span></dt>
+        <dd>
+            <span>{{vm.rentalTrip.rentStartTime | date:'medium'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.rentalTrip.rentStopTime">Rent Stop Time</span></dt>
+        <dd>
+            <span>{{vm.rentalTrip.rentStopTime | date:'medium'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.rentalTrip.fineApplied">Fine Applied</span></dt>
+        <dd>
+            <span>{{vm.rentalTrip.fineApplied}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.rentalTrip.rentedCycle">Rented Cycle</span></dt>
+        <dd>
+            <a ui-sref="bicycle-detail({id:vm.rentalTrip.rentedCycle.id})">{{vm.rentalTrip.rentedCycle.tagId}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.rentalTrip.customer">Customer</span></dt>
+        <dd>
+            <a ui-sref="member-mobile-detail({id:vm.rentalTrip.customer.id})">{{vm.rentalTrip.customer.id}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.rentalTrip.startNode">Start Node</span></dt>
+        <dd>
+            <a ui-sref="rental-buffer-node-detail({id:vm.rentalTrip.startNode.id})">{{vm.rentalTrip.startNode.stationName}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.rentalTrip.stopNode">Stop Node</span></dt>
+        <dd>
+            <a ui-sref="rental-buffer-node-detail({id:vm.rentalTrip.stopNode.id})">{{vm.rentalTrip.stopNode.stationName}}</a>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.rentalTrip.rentalCharge">Rental Charge</span></dt>
+        <dd>
+            <a ui-sref="hourly-rental-charges-detail({id:vm.rentalTrip.rentalCharge.id})">{{vm.rentalTrip.rentalCharge.id}}</a>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

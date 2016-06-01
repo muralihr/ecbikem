@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span translate="ecbikeApp.tripRentUnitsToChargeMap.detail.title">Trip Rent Units To Charge Map</span> {{vm.tripRentUnitsToChargeMap.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="ecbikeApp.tripRentUnitsToChargeMap.typeOfPassOrFare">Type Of Pass Or Fare</span></dt>
+        <dd>
+            <span>{{vm.tripRentUnitsToChargeMap.typeOfPassOrFare}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.tripRentUnitsToChargeMap.prePaidUnits">Pre Paid Units</span></dt>
+        <dd>
+            <span>{{vm.tripRentUnitsToChargeMap.prePaidUnits}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.tripRentUnitsToChargeMap.chargesForPaidUnits">Charges For Paid Units</span></dt>
+        <dd>
+            <span>{{vm.tripRentUnitsToChargeMap.chargesForPaidUnits}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.tripRentUnitsToChargeMap.expirationPeriodInMonths">Expiration Period In Months</span></dt>
+        <dd>
+            <span>{{vm.tripRentUnitsToChargeMap.expirationPeriodInMonths}}</span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,102 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myRentalTripLabel" translate="ecbikeApp.rentalTrip.home.createOrEditLabel">Create or edit a Rental Trip</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.rentalTrip.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.rentalTrip.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalTrip.rentStartTime" for="field_rentStartTime">Rent Start Time</label>
+                <div class="input-group">
+                    <input id="field_rentStartTime" type="text" class="form-control" name="rentStartTime" datetime-picker="{{dateformat}}" ng-model="vm.rentalTrip.rentStartTime" is-open="vm.datePickerOpenStatus.rentStartTime"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('rentStartTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.rentStartTime.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.rentStartTime.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.rentStartTime.$error.ZonedDateTimelocal" translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalTrip.rentStopTime" for="field_rentStopTime">Rent Stop Time</label>
+                <div class="input-group">
+                    <input id="field_rentStopTime" type="text" class="form-control" name="rentStopTime" datetime-picker="{{dateformat}}" ng-model="vm.rentalTrip.rentStopTime" is-open="vm.datePickerOpenStatus.rentStopTime"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('rentStopTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.rentStopTime.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.rentStopTime.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.rentStopTime.$error.ZonedDateTimelocal" translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.rentalTrip.fineApplied" for="field_fineApplied">Fine Applied</label>
+            <input type="checkbox" class="form-control" name="fineApplied" id="field_fineApplied"
+                    ng-model="vm.rentalTrip.fineApplied"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="ecbikeApp.rentalTrip.rentedCycle" for="field_rentedCycle">Rented Cycle</label>
+            <select class="form-control" id="field_rentedCycle" name="rentedCycle" ng-model="vm.rentalTrip.rentedCycle" ng-options="bicycle as bicycle.tagId for bicycle in vm.bicycles track by bicycle.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="ecbikeApp.rentalTrip.customer" for="field_customer">Customer</label>
+            <select class="form-control" id="field_customer" name="customer" ng-model="vm.rentalTrip.customer" ng-options="memberMobile as memberMobile.id for memberMobile in vm.membermobiles track by memberMobile.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="ecbikeApp.rentalTrip.startNode" for="field_startNode">Start Node</label>
+            <select class="form-control" id="field_startNode" name="startNode" ng-model="vm.rentalTrip.startNode" ng-options="rentalBufferNode as rentalBufferNode.stationName for rentalBufferNode in vm.rentalbuffernodes track by rentalBufferNode.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="ecbikeApp.rentalTrip.stopNode" for="field_stopNode">Stop Node</label>
+            <select class="form-control" id="field_stopNode" name="stopNode" ng-model="vm.rentalTrip.stopNode" ng-options="rentalBufferNode as rentalBufferNode.stationName for rentalBufferNode in vm.rentalbuffernodes track by rentalBufferNode.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="ecbikeApp.rentalTrip.rentalCharge" for="field_rentalCharge">Rental Charge</label>
+            <select class="form-control" id="field_rentalCharge" name="rentalCharge" ng-model="vm.rentalTrip.rentalCharge" ng-options="hourlyRentalCharges as hourlyRentalCharges.id for hourlyRentalCharges in vm.hourlyrentalcharges track by hourlyRentalCharges.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

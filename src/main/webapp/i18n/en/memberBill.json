@@ -1,0 +1,25 @@
+{
+    "ecbikeApp": {
+        "memberBill" : {
+            "home": {
+                "title": "Member Bills",
+                "createLabel": "Create a new Member Bill",
+                "createOrEditLabel": "Create or edit a Member Bill",
+                "search": "Search for Member Bill"
+            },
+            "created": "A new Member Bill is created with identifier {{ param }}",
+            "updated": "A Member Bill is updated with identifier {{ param }}",
+            "deleted": "A Member Bill is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Member Bill {{ id }}?"
+            },
+            "detail": {
+                "title": "Member Bill"
+            },
+            "dateOfPayment": "Date Of Payment",
+            "billCenter": "Bill Center",
+            "memberToBill": "Member To Bill",
+            "unitPrepaidCharge": "Unit Prepaid Charge"
+        }
+    }
+}

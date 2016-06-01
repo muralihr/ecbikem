@@ -1,0 +1,205 @@
+<div>
+   <h2 translate="nammanimmacycleApp.rentalTrip.home.title">RentalTrips</h2>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-2">
+            <div class="form-group">
+               <label for="id" translate="global.field.id">ID</label>
+               <input type="text" class="form-control" id="id" name="id"
+                  ng-model="tripmember.id"  >
+            </div>
+            <button class="btn btn-primary"  ng-click="checkAndDisplay()">
+            <span class="glyphicon glyphicon-flash"></span> <span >Check Member</span>
+            </button>
+         </div>
+           <div class="col-md-4" ng-show="memberValid">
+         <table class="table table-striped">
+            <thead>
+               <tr>
+                  <th translate="entity.detail.field">Field</th>
+                  <th translate="entity.detail.value">Value</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <span  >FirstName</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.firstName}}" readonly>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span  >LastName</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.lastName}}" readonly>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span  >DateOfBirth</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.dateOfBirth}}" readonly>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span  >MobileNo</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.mobileNo}}" readonly>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span  >Photo</span>
+                  </td>
+                  <td>
+                     <img data-ng-src="{{'data:image/*;base64,' + memberMobile.photo}}" style="max-width: 100%;" ng-if="memberMobile.photo"/>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span >MyCurrentRentUnits</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.myCurrentRentUnits}}" readonly>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span  >MyChargedRentUnits</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.myChargedRentUnits}}" readonly>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span  >BehaviorStatus</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.behaviorStatus}}" readonly>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span>MyCurrentFineCharges</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.myCurrentFineCharges}}" readonly>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span>DateOfExpiration</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.dateOfExpiration}}" readonly>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <span>Activated</span>
+                  </td>
+                  <td>
+                     <input type="text" class="input-sm form-control" value="{{memberMobile.activated}}" readonly>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+         <div class="col-md-6" ng-show="memberValid" style="width:433px; height:62px; border:1px solid #ccc; background-color:#286090;;">
+            <form name="editForm" role="form" novalidate ng-submit="startTrip()" show-validation>
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                     ng-click="clear()">&times;</button>
+                  <h4 class="modal-title" id="myRentalTripLabel" translate="nammanimmacycleApp.rentalTrip.home.createOrEditLabel">Create or edit a RentalTrip</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="form-group">
+                     <label for="id" translate="global.field.id">ID</label>
+                     <input type="text" class="form-control" id="id" name="id"
+                        ng-model="tripmember.id" readonly>
+                  </div>
+                  <div class="form-group">
+                     <label translate="nammanimmacycleApp.rentalTrip.rentStartTime" for="field_rentStartTime">RentStartTime</label>
+                     <input type="datetime-local" class="form-control" name="rentStartTime" id="field_rentStartTime"
+                        ng-model="rentalTrip.rentStartTime" ng-model-options="{timezone: 'UTC'}"
+                        required>
+                     <div ng-show="editForm.rentStartTime.$invalid">
+                        <p class="help-block"
+                           ng-show="editForm.rentStartTime.$error.required" translate="entity.validation.required">
+                           This field is required.
+                        </p>
+                        <p class="help-block"
+                           ng-show="editForm.rentStartTime.$error.datetimelocal" translate="entity.validation.datetimelocal">
+                           This field should be a date and time.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label translate="nammanimmacycleApp.rentalTrip.rentedCycle" for="field_rentedCycle">rentedCycle</label>
+                  <select class="form-control" id="field_rentedCycle" name="rentedCycle" ng-model="rentalTrip.rentedCycle.id" ng-options="bicycle.id as bicycle.tagId for bicycle in bicycles">
+                  </select>
+               </div>
+               <div class="form-group">
+                  <label translate="nammanimmacycleApp.rentalTrip.startNode" for="field_startNode">startNode</label>
+                  <select class="form-control" id="field_startNode" name="startNode" ng-model="rentalTrip.startNode.id" ng-options="rentalBufferNode.id as rentalBufferNode.stationName for rentalBufferNode in rentalbuffernodes" ng-change="loadAllBicyclesFromNode()">
+                  </select>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                  <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                  </button>
+                  <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                  </button>
+               </div>
+              </form>
+         </div>
+       
+         
+      </div>       
+   </div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+
+    <div id="form-container">
+
+        <div class="page-header text-center">
+            <h2>Let's Be Friends</h2>
+            
+            <!-- the links to our nested states using relative paths -->
+            <!-- add the active class if the state matches our ui-sref -->
+            <div id="status-buttons" class="text-center">
+                <a ui-sref-active="active" ui-sref=".profile"><span>1</span> Profile</a>
+                <a ui-sref-active="active" ui-sref=".interests"><span>2</span> Interests</a>
+                <a ui-sref-active="active" ui-sref=".payment"><span>3</span> Payment</a>
+            </div>
+        </div>
+        
+        <!-- use ng-submit to catch the form submission and use our Angular function -->
+        <form id="signup-form" ng-submit="processForm()">
+
+            <!-- our nested state views will be injected here -->
+            <div id="form-views" ui-view></div>
+        </form>
+
+    </div>
+
+    <!-- show our formData as it is being typed -->
+    <pre>
+        {{ formData }}
+    </pre>
+
+
+</div>
+</div>

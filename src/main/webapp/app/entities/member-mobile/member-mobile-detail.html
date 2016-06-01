@@ -1,0 +1,120 @@
+
+<div>
+    <h2><span translate="ecbikeApp.memberMobile.detail.title">Member Mobile</span> {{vm.memberMobile.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal">
+        <dt><span translate="ecbikeApp.memberMobile.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.firstName}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.lastName}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.dateOfBirth">Date Of Birth</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.dateOfBirth | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.emailId">Email Id</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.emailId}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.mobileNo">Mobile No</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.mobileNo}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.address1">Address 1</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.address1}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.address2">Address 2</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.address2}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.city">City</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.city}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.state">State</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.state}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.zipcode">Zipcode</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.zipcode}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.country">Country</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.country}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.photo">Photo</span></dt>
+        <dd>
+            <img data-ng-src="{{'data:' + vm.memberMobile.photoContentType + ';base64,' + vm.memberMobile.photo}}" style="max-width: 100%;" ng-if="vm.memberMobile.photo"/>
+            <div>{{vm.memberMobile.photoContentType}}, {{vm.byteSize(vm.memberMobile.photo)}}</div>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.photoIDProof">Photo Id Proof</span></dt>
+        <dd>
+            <img data-ng-src="{{'data:' + vm.memberMobile.photoIDProofContentType + ';base64,' + vm.memberMobile.photoIDProof}}" style="max-width: 100%;" ng-if="vm.memberMobile.photoIDProof"/>
+            <div>{{vm.memberMobile.photoIDProofContentType}}, {{vm.byteSize(vm.memberMobile.photoIDProof)}}</div>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.myCurrentRentUnits">My Current Rent Units</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.myCurrentRentUnits}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.myChargedRentUnits">My Charged Rent Units</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.myChargedRentUnits}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.behaviorStatus">Behavior Status</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.behaviorStatus}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.myCurrentFineCharges">My Current Fine Charges</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.myCurrentFineCharges}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.dateOfExpiration">Date Of Expiration</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.dateOfExpiration | date:'mediumDate'}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.userName">User Name</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.userName}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.passWord">Pass Word</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.passWord}}</span>
+        </dd>
+        <hr>
+        <dt><span translate="ecbikeApp.memberMobile.activated">Activated</span></dt>
+        <dd>
+            <span>{{vm.memberMobile.activated}}</span>
+        </dd>
+        <hr>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

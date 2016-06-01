@@ -1,0 +1,32 @@
+{
+    "ecbikeApp": {
+        "rentalBufferNode" : {
+            "home": {
+                "title": "RentalBufferNodes",
+                "createLabel": "नया Rental Buffer Node बनाएँ",
+                "createOrEditLabel": "Rental Buffer Node बनाएँ या संपादित करें",
+                "search": "Rental Buffer Node खोजें"
+            },
+            "created": "एक नया Rental Buffer Node [identifier: {{ param }}] तैयार है",
+            "updated": "एक Rental Buffer Node [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Rental Buffer Node [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Rental Buffer Node [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Rental Buffer Node"
+            },
+            "stationName": "Station Name",
+            "address1": "Address 1",
+            "address2": "Address 2",
+            "city": "City",
+            "state": "State",
+            "zipcode": "Zipcode",
+            "longitudePos": "Longitude Pos",
+            "latitudePos": "Latitude Pos",
+            "colorCode": "Color Code",
+            "photoOfLocation": "Photo Of Location",
+            "nodeManager": "Node Manager"
+        }
+    }
+}

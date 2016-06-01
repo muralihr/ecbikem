@@ -1,0 +1,24 @@
+
+
+
+<div ng-cloak>
+	<div class="row">
+	 
+		<div class="row">
+		   <div id='map' ></div>
+		   <leaflet lf-center="bahourcenter" tiles="tiles" geojson="geojson" width="100%" height="480px" markers="markers" event-broadcast="events"></leaflet>
+		   <h1> </h1>
+		   <!--   <pre ng-bind="layers | json"></pre>- -->
+		   <div class="alert alert-success">
+		      <span ng-if="showmsg == true">
+		         <strong> {{titleSelected}}  </strong>.
+		         <h3>{{cyclecount  }} </h3>
+		         <h5>  {{cycles   }} </h5>
+		         <h5>  {{address }} </h5>
+		      </span>
+		   </div>
+		   <span ng-if="showmsg == false">
+		   </span> 
+		</div>
+	<div>
+</div> 

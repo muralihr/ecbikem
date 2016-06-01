@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity MemberBill.
+    -->
+    <changeSet id="20150829120800-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="bill_center_id"
+                                 baseTableName="member_bill"
+                                 constraintName="fk_memberbill_billcenter_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="billing_node"/>
+
+        <addForeignKeyConstraint baseColumnNames="member_to_bill_id"
+                                 baseTableName="member_bill"
+                                 constraintName="fk_memberbill_membertobill_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="member_mobile"/>
+
+        <addForeignKeyConstraint baseColumnNames="unit_prepaid_charge_id"
+                                 baseTableName="member_bill"
+                                 constraintName="fk_memberbill_unitprepaidcharge_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="trip_rent_units_to_charge_map"/>
+
+    </changeSet>
+</databaseChangeLog>

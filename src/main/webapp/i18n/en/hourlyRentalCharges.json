@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "hourlyRentalCharges" : {
+            "home": {
+                "title": "Hourly Rental Charges",
+                "createLabel": "Create a new Hourly Rental Charges",
+                "createOrEditLabel": "Create or edit a Hourly Rental Charges",
+                "search": "Search for Hourly Rental Charges"
+            },
+            "created": "A new Hourly Rental Charges is created with identifier {{ param }}",
+            "updated": "A Hourly Rental Charges is updated with identifier {{ param }}",
+            "deleted": "A Hourly Rental Charges is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Hourly Rental Charges {{ id }}?"
+            },
+            "detail": {
+                "title": "Hourly Rental Charges"
+            },
+            "deductableUnits": "Deductable Units",
+            "rentedHours": "Rented Hours"
+        }
+    }
+}

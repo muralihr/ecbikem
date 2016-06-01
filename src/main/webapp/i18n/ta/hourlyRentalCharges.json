@@ -1,0 +1,23 @@
+{
+    "ecbikeApp": {
+        "hourlyRentalCharges" : {
+            "home": {
+                "title": "Hourly Rental Charges",
+                "createLabel": "Hourly Rental Charges-ஐ உருவாக்கு",
+                "createOrEditLabel": "Hourly Rental Charges -ஐ மாற்று (அ) உருவாக்கு",
+                "search": "Search for Hourly Rental Charges"
+            },
+            "created": "Hourly Rental Charges புதிதாக உருவாக்கப்பட்டது, அடையாளம் {{ param }}",
+            "updated": "Hourly Rental Charges மாற்றப்பட்டது, அடையாளம்  {{ param }}",
+            "deleted": "A Hourly Rental Charges நீக்கப்பட்டது, அடையாளம {{ param }}",
+            "delete": {
+                "question": "நீக்குவதற்கு உறுதி செய் Hourly Rental Charges {{ id }}?"
+            },
+            "detail": {
+                "title": "Hourly Rental Charges"
+            },
+            "deductableUnits": "Deductable Units",
+            "rentedHours": "Rented Hours"
+        }
+    }
+}
