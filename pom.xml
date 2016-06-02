@@ -729,6 +729,8 @@
             </dependencies>
             <build>
                 <plugins>
+					
+					
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-war-plugin</artifactId>
@@ -763,6 +765,7 @@
                                 </goals>
                                 <configuration>
                                     <buildTool>gulp</buildTool>
+									 <skipTests>true</skipTests>
                                     <buildArgs>build --no-notification</buildArgs>
                                 </configuration>
                             </execution>
