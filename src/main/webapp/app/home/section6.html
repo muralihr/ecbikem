@@ -1,82 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html ng-app="helloApp">
-<head>
-<style type="text/css">.col-sm-4{width: 43.33333333%;}</style>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Hello AngularJS - Hello World</title>
-<link rel="stylesheet"
-	href="bootstrap.min.css">
-<script
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script
-	src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	
-	
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
-	
-	<script src="angular-multi-step-form.min.js"></script>
-<script>
-	var helloApp = angular.module("helloApp",  ['multiStepForm']);
-	helloApp.controller("HelloCtrl", function($scope) {
-		 
-		
-	$scope.steps = [
-    {
-        templateUrl: 'section6-1.html',
-        title: 'Introduction'
-    },
-    {
-        templateUrl: 'section6-2.html',
-        hasForm: false,
-        title: 'Update validity'
-    },
-    {
-        templateUrl: 'section6-3.html',
-        hasForm: false,
-        title: 'Update validity'
-    },
-    {
-        templateUrl: 'section6-4.html',
-        hasForm: false,
-        title: 'Update validity'
-    }
- 
-];
-
-
-	});
-</script>
-</head>
-<body ng-controller="HelloCtrl">
-	  <multi-step-container steps="steps2" class="simple-prev-next">
-    
-<div class="row">
-  <div class="col-sm-4">
-  </div>
-  <div class="col-sm-4"> <button ng-disabled="$isFirst()" class="nextbtn" ng-click="$previousStep()">
-            <span class="fa fa-chevron-left"></span>
-            Previous
-        </button>
-        <strong ng-if="$getActiveStep().hasForm" class="fa" ng-class="$getActiveStep().valid ? 'fa-check' : 'fa-times'"></strong>
-
-        <button ng-disabled="$isLast() || ($getActiveStep().hasForm && !$getActiveStep().valid)" class="nextbtn" ng-click="$nextStep()">
-            Next
-            <span class="fa fa-chevron-right"></span>
-        </button></div>
-  <div class="col-sm-4"></div>
-</div>
-    
-
-    <main step-container>
-        
-
-
-    </main>
-
-
+<multi-step-container steps="steps2" class="simple-prev-next">
+   <div class="row">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-4"> <button ng-disabled="$isFirst()" class="nextbtn" ng-click="$previousStep()">
+         <span class="fa fa-chevron-left"></span>
+         Previous
+         </button>
+         <strong ng-if="$getActiveStep().hasForm" class="fa" ng-class="$getActiveStep().valid ? 'fa-check' : 'fa-times'"></strong>
+         <button ng-disabled="$isLast() || ($getActiveStep().hasForm && !$getActiveStep().valid)" class="nextbtn" ng-click="$nextStep()">
+         Next
+         <span class="fa fa-chevron-right"></span>
+         </button>
+      </div>
+      <div class="col-sm-4"></div>
+   </div>
+   <main step-container>
+   </main>
 </multi-step-container>
- 
-</body>
-</html>	
-			
