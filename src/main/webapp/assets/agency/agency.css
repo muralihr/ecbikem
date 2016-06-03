@@ -8,6 +8,27 @@ body {
 .text-primary {
     color: #fed136
 }
+.paneltitle{text-align: center;
+    padding-top: 20px;
+    line-height: normal;
+    background-color: #3A97B5;
+    padding-bottom: 20px;
+color:whitesmoke;}
+    .btn-panel{color:black;
+        background-color: #3A97B5;
+        text-align: center;
+        font-size: 22px;
+    padding-bottom: 15px;
+    padding-top: 15px;}
+
+
+.v-tab{border-radius: 4px;
+display: block;
+font-size: 40px;
+background-color: #3A97B5;
+color: black !important}
+
+
 p {
     font-size: 14px;
     line-height: 1.75
@@ -23,13 +44,14 @@ a.active {
     outline: 0
 }
 a {
-    color: #fed136
+    color: white;
 }
 a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #fec503
+    color: #3a97b5;
+    background-color: #ffda54;
 }
 h1,
 h2,
@@ -273,9 +295,9 @@ header .intro-text .intro-heading {
         margin-bottom: 50px
     }
 }
-section {
+/*section {
     padding: 100px 0
-}
+}*/
 section h2.section-heading {
     font-size: 40px;
     margin-top: 0;
@@ -289,11 +311,11 @@ section h3.section-subheading {
     font-weight: 400;
     margin-bottom: 75px
 }
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     section {
         padding: 150px 0
     }
-}
+}*/
 .service-heading {
     margin: 15px 0;
     text-transform: none
@@ -543,12 +565,15 @@ section h3.section-subheading {
     margin-bottom: 0;
     text-transform: none
 }
+.navbar{    background-color: #3A97B5 !important;
+    color: rgba(255,255,255, 0.84);}
 .team-member p {
     margin-top: 0
 }
 aside.clients img {
     margin: 50px auto
 }
+.container1{background-color: #27AE60}
 section#contact {
     background-color: #222;
     background-image: url(../img/map-image.png);
@@ -728,4 +753,29 @@ img::-moz-selection {
 }
 body {
     webkit-tap-highlight-color: #fed136
+}
+
+
+.footer {
+    background: #061D25;
+    padding: 10px 0;
+}
+
+.footer a {
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.footer a:first-child {
+    border-left: 1px solid #70726F;
+}
+
+.footer a:hover {
+    color: white;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
 }

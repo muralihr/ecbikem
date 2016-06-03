@@ -83,7 +83,7 @@
             },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/member-mobile/member-mobile-dialog.html',
+                    templateUrl: 'app/entities/member-mobile/originalmember-mobile-dialog.html',
                     controller: 'MemberMobileDialogController',
                     controllerAs: 'vm',
                     backdrop: 'static',
@@ -133,7 +133,7 @@
             },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
-                    templateUrl: 'app/entities/member-mobile/member-mobile-dialog.html',
+                    templateUrl: 'app/entities/member-mobile/originalmember-mobile-dialog.html',
                     controller: 'MemberMobileDialogController',
                     controllerAs: 'vm',
                     backdrop: 'static',

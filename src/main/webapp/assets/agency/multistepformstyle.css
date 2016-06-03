@@ -5,7 +5,7 @@
 * {margin: 0; padding: 0;}
 .nextbtn{
     width: 100px;
-background: #27AE60;
+background: #3A97B5;
 font-weight: bold;
 color: white;
 border: 0 none;
@@ -20,7 +20,7 @@ margin: 10px 5px;
 html {
 	height: 100%;
 	/*Image only BG fallback*/
-	background: url('http://thecodeplayer.com/uploads/media/gs.png');
+	
 	/*background = gradient + image pattern combo*/
 	
 }
@@ -104,7 +104,7 @@ body {
 }
 #progressbar li {
 	list-style-type: none;
-	color: #009688;
+	color: #3A97B5;
 	text-transform: uppercase;
 	font-size: 12px;
 	width: 18%;
@@ -118,7 +118,7 @@ body {
 	line-height: 20px;
 	display: block;
 	font-size: 10px;
-	color: #333;
+	color: #3A97B5;
 	background: white;
 	border-radius: 3px;
 	margin: 0 auto 5px auto;
@@ -141,7 +141,7 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+	background: #3A97B5;
 	color: white;
 }
 .top5 { margin-top:5px; }

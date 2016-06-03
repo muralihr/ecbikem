@@ -1,212 +1,29 @@
 
-<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
-
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
-                ng-click="vm.clear()">&times;</button>
-        <h4 class="modal-title" id="myMemberMobileLabel" translate="ecbikeApp.memberMobile.home.createOrEditLabel">Create or edit a Member Mobile</h4>
-    </div>
-    <div class="modal-body">
-        <jhi-alert-error></jhi-alert-error>
-        <div class="form-group" ng-show="vm.memberMobile.id">
-            <label for="id" translate="global.field.id">ID</label>
-            <input type="text" class="form-control" id="id" name="id"
-                    ng-model="vm.memberMobile.id" readonly />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.firstName" for="field_firstName">First Name</label>
-            <input type="text" class="form-control" name="firstName" id="field_firstName"
-                    ng-model="vm.memberMobile.firstName"
-                    required />
-            <div ng-show="editForm.firstName.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.firstName.$error.required" translate="entity.validation.required">
-                    This field is required.
-                </p>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.lastName" for="field_lastName">Last Name</label>
-            <input type="text" class="form-control" name="lastName" id="field_lastName"
-                    ng-model="vm.memberMobile.lastName"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.dateOfBirth" for="field_dateOfBirth">Date Of Birth</label>
-                <div class="input-group">
-                    <input id="field_dateOfBirth" type="text" class="form-control" name="dateOfBirth" uib-datepicker-popup="{{dateformat}}" ng-model="vm.memberMobile.dateOfBirth" is-open="vm.datePickerOpenStatus.dateOfBirth"
-                    required/>
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateOfBirth')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </div>
-            <div ng-show="editForm.dateOfBirth.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.dateOfBirth.$error.required" translate="entity.validation.required">
-                    This field is required.
-                </p>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.emailId" for="field_emailId">Email Id</label>
-            <input type="text" class="form-control" name="emailId" id="field_emailId"
-                    ng-model="vm.memberMobile.emailId"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.mobileNo" for="field_mobileNo">Mobile No</label>
-            <input type="text" class="form-control" name="mobileNo" id="field_mobileNo"
-                    ng-model="vm.memberMobile.mobileNo"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.address1" for="field_address1">Address 1</label>
-            <input type="text" class="form-control" name="address1" id="field_address1"
-                    ng-model="vm.memberMobile.address1"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.address2" for="field_address2">Address 2</label>
-            <input type="text" class="form-control" name="address2" id="field_address2"
-                    ng-model="vm.memberMobile.address2"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.city" for="field_city">City</label>
-            <input type="text" class="form-control" name="city" id="field_city"
-                    ng-model="vm.memberMobile.city"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.state" for="field_state">State</label>
-            <input type="text" class="form-control" name="state" id="field_state"
-                    ng-model="vm.memberMobile.state"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.zipcode" for="field_zipcode">Zipcode</label>
-            <input type="text" class="form-control" name="zipcode" id="field_zipcode"
-                    ng-model="vm.memberMobile.zipcode"
-                    required />
-            <div ng-show="editForm.zipcode.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.zipcode.$error.required" translate="entity.validation.required">
-                    This field is required.
-                </p>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.country" for="field_country">Country</label>
-            <input type="text" class="form-control" name="country" id="field_country"
-                    ng-model="vm.memberMobile.country"
-                     />
-        </div>
-        <div class="form-group" ngf-drop ngf-change="vm.setPhoto($file, vm.memberMobile)" ngf-pattern="'image/*'">
-            <label class="control-label" translate="ecbikeApp.memberMobile.photo" for="field_photo">Photo</label>
-            <div>
-                <img data-ng-src="{{'data:' + vm.memberMobile.photoContentType + ';base64,' + vm.memberMobile.photo}}" style="max-height: 100px;" ng-if="vm.memberMobile.photo"/>
-                <div class="help-block clearfix">
-                    <span class="pull-left">{{vm.memberMobile.photoContentType}}, {{byteSize(vm.memberMobile.photo)}}</span>
-                    <button ng-click="vm.memberMobile.photo=null;vm.memberMobile.photoContentType=null;"
-                            ng-if="vm.memberMobile.photo"
-                            class="btn btn-default btn-xs pull-right">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </button>
-                </div>
-                <button type="file" ngf-select class="btn btn-default btn-block"
-                        ngf-change="vm.setPhoto($file, vm.memberMobile)" accept="image/*" translate="entity.action.addimage">
-                    Add image
-                </button>
-            </div>
-            <input type="hidden" class="form-control" name="photo" id="field_photo"
-                    ng-model="vm.memberMobile.photo"
-                     />
-            <input type="hidden" class="form-control" name="photoContentType" id="field_photoContentType"
-                    ng-model="vm.memberMobile.photoContentType" />
-        </div>
-        <div class="form-group" ngf-drop ngf-change="vm.setPhotoIDProof($file, vm.memberMobile)" ngf-pattern="'image/*'">
-            <label class="control-label" translate="ecbikeApp.memberMobile.photoIDProof" for="field_photoIDProof">Photo Id Proof</label>
-            <div>
-                <img data-ng-src="{{'data:' + vm.memberMobile.photoIDProofContentType + ';base64,' + vm.memberMobile.photoIDProof}}" style="max-height: 100px;" ng-if="vm.memberMobile.photoIDProof"/>
-                <div class="help-block clearfix">
-                    <span class="pull-left">{{vm.memberMobile.photoIDProofContentType}}, {{byteSize(vm.memberMobile.photoIDProof)}}</span>
-                    <button ng-click="vm.memberMobile.photoIDProof=null;vm.memberMobile.photoIDProofContentType=null;"
-                            ng-if="vm.memberMobile.photoIDProof"
-                            class="btn btn-default btn-xs pull-right">
-                        <span class="glyphicon glyphicon-remove"></span>
-                    </button>
-                </div>
-                <button type="file" ngf-select class="btn btn-default btn-block"
-                        ngf-change="vm.setPhotoIDProof($file, vm.memberMobile)" accept="image/*" translate="entity.action.addimage">
-                    Add image
-                </button>
-            </div>
-            <input type="hidden" class="form-control" name="photoIDProof" id="field_photoIDProof"
-                    ng-model="vm.memberMobile.photoIDProof"
-                     />
-            <input type="hidden" class="form-control" name="photoIDProofContentType" id="field_photoIDProofContentType"
-                    ng-model="vm.memberMobile.photoIDProofContentType" />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.myCurrentRentUnits" for="field_myCurrentRentUnits">My Current Rent Units</label>
-            <input type="number" class="form-control" name="myCurrentRentUnits" id="field_myCurrentRentUnits"
-                    ng-model="vm.memberMobile.myCurrentRentUnits"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.myChargedRentUnits" for="field_myChargedRentUnits">My Charged Rent Units</label>
-            <input type="number" class="form-control" name="myChargedRentUnits" id="field_myChargedRentUnits"
-                    ng-model="vm.memberMobile.myChargedRentUnits"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.behaviorStatus" for="field_behaviorStatus">Behavior Status</label>
-            <input type="number" class="form-control" name="behaviorStatus" id="field_behaviorStatus"
-                    ng-model="vm.memberMobile.behaviorStatus"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.myCurrentFineCharges" for="field_myCurrentFineCharges">My Current Fine Charges</label>
-            <input type="number" class="form-control" name="myCurrentFineCharges" id="field_myCurrentFineCharges"
-                    ng-model="vm.memberMobile.myCurrentFineCharges"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.dateOfExpiration" for="field_dateOfExpiration">Date Of Expiration</label>
-                <div class="input-group">
-                    <input id="field_dateOfExpiration" type="text" class="form-control" name="dateOfExpiration" uib-datepicker-popup="{{dateformat}}" ng-model="vm.memberMobile.dateOfExpiration" is-open="vm.datePickerOpenStatus.dateOfExpiration"
-                    />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateOfExpiration')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.userName" for="field_userName">User Name</label>
-            <input type="text" class="form-control" name="userName" id="field_userName"
-                    ng-model="vm.memberMobile.userName"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.passWord" for="field_passWord">Pass Word</label>
-            <input type="text" class="form-control" name="passWord" id="field_passWord"
-                    ng-model="vm.memberMobile.passWord"
-                     />
-        </div>
-        <div class="form-group">
-            <label class="control-label" translate="ecbikeApp.memberMobile.activated" for="field_activated">Activated</label>
-            <input type="checkbox" class="form-control" name="activated" id="field_activated"
-                    ng-model="vm.memberMobile.activated"
-                     />
-        </div>
-
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
-            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+ 
+<multi-step-container steps="steps" class="simple-prev-next">
+    
+ <div class="row">
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-4"> <button ng-disabled="$isFirst()" class="nextbtn" ng-click="$previousStep()">
+            <span class="fa fa-chevron-left"></span>
+            Previous
         </button>
-        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
-            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
-        </button>
-    </div>
-</form>
+        <strong ng-if="$getActiveStep().hasForm" class="fa" ng-class="$getActiveStep().valid ? 'fa-check' : 'fa-times'"></strong>
+
+        <button ng-disabled="$isLast() || ($getActiveStep().hasForm && !$getActiveStep().valid)" class="nextbtn" ng-click="$nextStep()">
+            Next
+            <span class="fa fa-chevron-right"></span>
+        </button></div>
+  <div class="col-sm-4"></div>
+</div>
+    
+
+    <main step-container>
+        
+
+
+    </main>
+
+
+</multi-step-container> 

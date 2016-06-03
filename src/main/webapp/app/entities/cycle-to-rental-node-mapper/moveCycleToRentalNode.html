@@ -27,10 +27,7 @@
 	 		</div>
                 <label for="sclients">Selected Cycles</label>
                 <select size="5" multiple ng-model="selected" ng-options="client as client.tagId for client in selectedclients" style="width: 400px" class="form-control"></select>
-                <div>Selected Clients: {{selectedclients}}</div>
-                <div>Available Clients: {{availableclients}}</div>
-                <div>Selected: {{selected}}</div>
-                <div>Available: {{available}}</div>
+               
             </div>
            
                <button type="button" class="btn btn-primary" ng-click="moveCyclesToSelectedNode(selectedclients,selectedStock, selectedNode)">Move to selected Node <b>{{rentalBufferNodes[selectedNode-1].stationName}}</b> -ID :{{selectedNode}}  </button>

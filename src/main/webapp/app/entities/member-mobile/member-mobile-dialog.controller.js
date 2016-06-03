@@ -8,7 +8,25 @@
     MemberMobileDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'DataUtils', 'entity', 'MemberMobile'];
 
     function MemberMobileDialogController ($timeout, $scope, $stateParams, $uibModalInstance, DataUtils, entity, MemberMobile) {
-        var vm = this;
+       
+    	
+    	$scope.steps = [
+    	                {
+    	                	
+    	                	    
+    	                    templateUrl: 'app/entities/member-mobile/member-mobile-1.html',
+    	                    title: 'User Info'
+    	                },
+    	                {
+    	                	templateUrl: 'app/entities/member-mobile/member-mobile-2.html' ,
+    	                    
+    	                    hasForm: true,
+    	                    title: 'Update validity'
+    	                }  
+     ];
+    	
+    	
+    	var vm = this;
         vm.memberMobile = entity;
 
         $timeout(function (){

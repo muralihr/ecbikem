@@ -1,0 +1,57 @@
+ <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.memberMobile.myChargedRentUnits" for="field_myChargedRentUnits">My Charged Rent Units</label>
+            <input type="number" class="form-control" name="myChargedRentUnits" id="field_myChargedRentUnits"
+                    ng-model="vm.memberMobile.myChargedRentUnits"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.memberMobile.behaviorStatus" for="field_behaviorStatus">Behavior Status</label>
+            <input type="number" class="form-control" name="behaviorStatus" id="field_behaviorStatus"
+                    ng-model="vm.memberMobile.behaviorStatus"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.memberMobile.myCurrentFineCharges" for="field_myCurrentFineCharges">My Current Fine Charges</label>
+            <input type="number" class="form-control" name="myCurrentFineCharges" id="field_myCurrentFineCharges"
+                    ng-model="vm.memberMobile.myCurrentFineCharges"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.memberMobile.dateOfExpiration" for="field_dateOfExpiration">Date Of Expiration</label>
+                <div class="input-group">
+                    <input id="field_dateOfExpiration" type="text" class="form-control" name="dateOfExpiration" uib-datepicker-popup="{{dateformat}}" ng-model="vm.memberMobile.dateOfExpiration" is-open="vm.datePickerOpenStatus.dateOfExpiration"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateOfExpiration')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.memberMobile.userName" for="field_userName">User Name</label>
+            <input type="text" class="form-control" name="userName" id="field_userName"
+                    ng-model="vm.memberMobile.userName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.memberMobile.passWord" for="field_passWord">Pass Word</label>
+            <input type="text" class="form-control" name="passWord" id="field_passWord"
+                    ng-model="vm.memberMobile.passWord"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="ecbikeApp.memberMobile.activated" for="field_activated">Activated</label>
+            <input type="checkbox" class="form-control" name="activated" id="field_activated"
+                    ng-model="vm.memberMobile.activated"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

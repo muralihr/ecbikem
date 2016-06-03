@@ -63,6 +63,7 @@ public class DatabaseConfiguration {
                 .username(dataSourceProperties.getUsername())
                 .password(dataSourceProperties.getPassword())
                 .build();
+        hikariDataSource.setPoolName("Ecbike");
 
         if (metricRegistry != null) {
             hikariDataSource.setMetricRegistry(metricRegistry);

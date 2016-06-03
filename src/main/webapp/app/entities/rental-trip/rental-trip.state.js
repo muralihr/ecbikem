@@ -56,7 +56,7 @@
             url: '/rental-trip/{id}',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'ecbikeApp.rentalTrip.detail.title'
+                pageTitle: 'ecbikeApp.rentalTrip.home.title'
             },
             views: {
                 'content@': {
@@ -80,7 +80,7 @@
             url: '/rental-trips/starttrip',
             data: {
                 authorities: ['ROLE_USER'],
-                pageTitle: 'ecbikeApp.rentalTrip.detail.title'
+                pageTitle: 'START TRIP - ENTER MEMBER ID'
             },
             views: {
                 'content@': {
